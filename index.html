@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="tr">
+<html lang="tr" dir="ltr">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
@@ -8,7 +8,7 @@
 <link rel="icon" href="logo.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,800;0,900;1,700;1,800&family=Manrope:wght@300;400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,800;0,900;1,700;1,800&family=Amiri:ital,wght@0,400;0,700;1,700&family=Tajawal:wght@400;500;700;800&family=Manrope:wght@300;400;500;600;700;800&display=swap">
 <style>
 /* Layout: classic black & white luxury. White sections carry the page, black bands punctuate it; Moonlight-style motion (preloader, blend cursor, masked reveals, marquees, magnetic buttons, booking wizard). */
 :root{
@@ -77,7 +77,7 @@ nav .in{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:1
 .logo{display:flex;align-items:center;gap:14px;white-space:nowrap;justify-self:start}
 .logo img{width:48px;height:48px;border-radius:50%;object-fit:cover;border:1px solid var(--gold-hi);transition:transform .8s var(--ease)}
 .logo:hover img{transform:rotate(360deg)}
-.logo .lt{display:flex;flex-direction:column;gap:3px;padding-left:14px;border-left:1px solid var(--gold-hi);font-size:9.5px;font-weight:800;letter-spacing:.3em;text-transform:uppercase;line-height:1.2}
+.logo .lt{display:flex;flex-direction:column;gap:3px;padding-inline-start:14px;border-inline-start:1px solid var(--gold-hi);font-size:9.5px;font-weight:800;letter-spacing:.3em;text-transform:uppercase;line-height:1.2}
 .logo .lt b{color:var(--gold);font-weight:800}
 .logo .lt span{color:var(--sub)}
 .logo .lt i{display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--gold-hi);margin-right:7px;vertical-align:middle;animation:blink 1.6s infinite}
@@ -193,7 +193,7 @@ nav .in{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:1
 .row{display:grid;grid-template-columns:54px 1fr auto auto;gap:22px;align-items:center;padding:24px 14px;border-bottom:1px solid var(--line);position:relative;overflow:hidden;z-index:0;transition:color .5s var(--ease),padding .5s var(--ease);animation:rowin .7s var(--ease) both}
 @keyframes rowin{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:none}}
 .row::before{content:"";position:absolute;inset:0;background:var(--fg);transform:scaleY(0);transform-origin:bottom;transition:transform .5s var(--ease);z-index:-1}
-.row:hover{color:var(--bg);padding-left:32px}
+.row:hover{color:var(--bg);padding-inline-start:32px}
 .row:hover::before{transform:scaleY(1)}
 .row .no{font-size:12px;color:var(--gold);font-weight:800;letter-spacing:.1em;font-variant-numeric:tabular-nums}
 .row:hover .no,.row:hover .ds{color:var(--bg)}
@@ -216,20 +216,20 @@ nav .in{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:1
 .acc{border-top:1px solid var(--line);align-self:start}
 .ai{border-bottom:1px solid var(--line);transition:background .4s}
 .ai.open{background:var(--chip);box-shadow:inset 2px 0 0 var(--gold)}
-.ah{display:flex;align-items:center;gap:18px;padding:26px 18px;width:100%;text-align:left}
+.ah{display:flex;align-items:center;gap:18px;padding:26px 18px;width:100%;text-align:start}
 .ah .n{font-size:11px;color:var(--gold);font-weight:800;letter-spacing:.1em;font-variant-numeric:tabular-nums}
 .ah .t{flex:1;font-family:var(--f-disp);font-size:clamp(20px,2.2vw,28px);text-transform:uppercase}
 .ah .pl{font-size:24px;transition:transform .5s var(--ease)}
 .ai.open .pl{transform:rotate(45deg)}
 .ab{max-height:0;overflow:hidden;transition:max-height .7s var(--ease)}
-.ab p{margin:0;padding:0 40px 28px 54px;color:var(--sub);font-size:15px}
+.ab p{margin:0;padding-block:0 28px;padding-inline:54px 40px;color:var(--sub);font-size:15px}
 @media(max-width:900px){.about{grid-template-columns:1fr}}
 
 /* gallery */
 .gh{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap}
 .strip{display:flex;gap:14px;margin-top:44px;overflow-x:auto;padding-bottom:16px;scrollbar-width:none;scroll-snap-type:x mandatory}
 .strip::-webkit-scrollbar{display:none}
-.tile{position:relative;flex:0 0 clamp(210px,22vw,290px);aspect-ratio:9/16;border-radius:14px;overflow:hidden;scroll-snap-align:start;background:#111;border:1px solid #1d1d1d;color:#fff;text-align:left}
+.tile{position:relative;flex:0 0 clamp(210px,22vw,290px);aspect-ratio:9/16;border-radius:14px;overflow:hidden;scroll-snap-align:start;background:#111;border:1px solid #1d1d1d;color:#fff;text-align:start}
 .tile video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform 1.2s var(--ease);pointer-events:none}
 .tile:hover video{transform:scale(1.08)}
 .tile .lb{color:#fff}
@@ -249,7 +249,7 @@ nav .in{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:1
 /* location + hours */
 .hl{display:grid;grid-template-columns:1fr 1fr;gap:clamp(30px,6vw,90px);align-items:start}
 .loc{background:#fff;color:#0a0a0a;border-radius:18px;overflow:hidden}
-.loc .tp{position:relative;height:220px;background:#111;overflow:hidden}
+.loc .tp{position:relative;height:250px;background:#101010;overflow:hidden}
 .loc .tp img{width:100%;height:100%;object-fit:cover;filter:brightness(.8)}
 .loc h3{color:#0a0a0a}.loc h3 .g{color:#a8812f}
 .loc .tp .pin{position:absolute;left:50%;top:50%;width:34px;height:34px;margin:-34px 0 0 -17px;background:#fff;border-radius:50% 50% 50% 0;transform:rotate(-45deg);z-index:2;animation:bounce 1.8s infinite}
@@ -264,7 +264,7 @@ nav .in{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:1
 .acts a,.acts button{border:1px solid #0a0a0a;border-radius:99px;padding:9px 16px;font-size:10.5px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;transition:all .3s;color:#0a0a0a}
 .acts a:hover,.acts button:hover{background:#0a0a0a;color:#fff}
 .hr{display:flex;justify-content:space-between;padding:20px 0;border-bottom:1px solid var(--line);font-size:clamp(16px,1.8vw,20px);transition:padding .4s var(--ease);font-variant-numeric:tabular-nums}
-.hr:hover{padding-left:16px}
+.hr:hover{padding-inline-start:16px}
 .hr.today{font-weight:700}
 .hr.today em{font-style:normal;font-size:9.5px;letter-spacing:.2em;text-transform:uppercase;background:#fff;color:#000;padding:4px 10px;border-radius:99px;margin-left:12px;vertical-align:middle;font-weight:800}
 .hr .cl{color:var(--mute)}
@@ -286,7 +286,7 @@ nav .in{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:1
 .pn h3{font-size:clamp(26px,3vw,34px);margin-bottom:24px;display:flex;gap:12px;align-items:baseline}
 .pn h3 small{font-family:var(--f-body);font-size:13px;color:#777;letter-spacing:.1em}
 .opts{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px}
-.opt{background:#fff;border:1px solid #d6d6d6;border-radius:14px;padding:18px 20px;text-align:left;transition:all .35s var(--ease)}
+.opt{background:#fff;border:1px solid #d6d6d6;border-radius:14px;padding:18px 20px;text-align:start;transition:all .35s var(--ease)}
 .opt b{display:block;font-family:var(--f-disp);font-weight:800;font-size:22px;text-transform:uppercase}
 .opt.on b{color:#d2ae68}
 .opt span{font-size:13px;color:#666}
@@ -323,57 +323,91 @@ footer .ft a:hover{color:var(--fg)}
 .fab{position:fixed;right:calc(20px + env(safe-area-inset-right,0px));bottom:calc(20px + env(safe-area-inset-bottom,0px));z-index:320;width:66px;height:66px;border-radius:50%;background:#0a0a0a;color:#fff;border:2px solid #fff;outline:1px solid #0a0a0a;display:grid;place-items:center;font-size:9.5px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;animation:pulse 2.4s infinite}
 @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(120,120,120,.6)}100%{box-shadow:0 0 0 26px rgba(120,120,120,0)}}
 @media (prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}.pre{display:none}}
+
+/* language switch */
+.lang{display:flex;border:1px solid var(--line2);border-radius:99px;padding:3px;gap:2px}
+.lang button{min-width:34px;padding:7px 10px;border-radius:99px;font-family:var(--f-body);font-size:10.5px;font-weight:800;letter-spacing:.08em;transition:background .3s,color .3s;color:var(--fg)}
+.lang button[lang=ar]{font-family:'Tajawal',sans-serif;font-size:13px;padding-block:5px}
+.lang button.on{background:var(--fg);color:var(--bg)}
+.menu .lang{border-color:#333;margin-bottom:30px;width:max-content}
+.menu .lang button{color:#fff}.menu .lang button.on{background:#d2ae68;color:#0a0a0a}
+@media(max-width:760px){.navr .lang{display:none}}
+/* Arabic + RTL */
+html[lang=ar]{--f-disp:'Amiri','Playfair Display',Georgia,serif;--f-body:'Tajawal','Manrope',system-ui,sans-serif}
+html[lang=ar] body *:not(.lat):not(.lat *){letter-spacing:0!important}
+html[lang=ar] h1,html[lang=ar] h2,html[lang=ar] h3,html[lang=ar] .disp,html[lang=ar] .mq .t{line-height:1.3;font-weight:700}
+html[lang=ar] .hero h1{font-size:clamp(48px,7.6vw,124px)}
+html[lang=ar] .it{font-style:normal}
+html[lang=ar] .menu a.ml{font-weight:700;line-height:1.35}
+.lat{font-family:'Playfair Display',Georgia,serif!important}
+[dir=rtl] .fl{display:inline-block;transform:scaleX(-1)}
+.mq,.badge{direction:ltr}
+[dir=rtl] .ai.open{box-shadow:inset -2px 0 0 var(--gold)}
+[dir=rtl] .sum b{text-align:left}
+/* shop illustration */
+.shop{position:absolute;inset:0;width:100%;height:100%;display:block}
+.shop .glow{animation:flick 5s infinite}
+.shop .lamp{animation:flick 3.4s infinite;transform-box:fill-box;transform-origin:center}
+.shop .stripes{animation:poleUp 1.1s linear infinite}
+.shop .sign-t{animation:signGlow 3s ease-in-out infinite}
+@keyframes poleUp{to{transform:translateY(-24px)}}
+@keyframes flick{0%,100%{opacity:.95}46%{opacity:.8}50%{opacity:1}52%{opacity:.55}55%{opacity:.95}}
+@keyframes signGlow{0%,100%{opacity:1}50%{opacity:.72}}
+.loc .tp .pin{top:14px;margin:0 0 0 -17px}
 </style>
 </head>
 <body>
+
 
 
 <div class="cur" aria-hidden="true"></div><div class="dot" aria-hidden="true"></div><div class="prog" id="prog" aria-hidden="true"></div>
 
 <div class="pre" id="pre" aria-hidden="true">
   <img src="logo.jpg" alt="">
-  <div class="w" id="preW"></div>
+  <div class="w lat" id="preW"></div>
   <div class="n" id="preN">000</div>
 </div>
 
-<div class="rail l" aria-hidden="true"><div class="rt"><span>İbrahim Doğan Haircut ✦ Mezitli · Mersin ✦</span><span>İbrahim Doğan Haircut ✦ Mezitli · Mersin ✦</span><span>İbrahim Doğan Haircut ✦ Mezitli · Mersin ✦</span><span>İbrahim Doğan Haircut ✦ Mezitli · Mersin ✦</span></div></div>
-<div class="rail r" aria-hidden="true"><div class="rt"><span>Kesim ✦ Sakal ✦ Stil ✦ Detay ✦</span><span>Kesim ✦ Sakal ✦ Stil ✦ Detay ✦</span><span>Kesim ✦ Sakal ✦ Stil ✦ Detay ✦</span><span>Kesim ✦ Sakal ✦ Stil ✦ Detay ✦</span></div></div>
+<div class="rail l" aria-hidden="true"><div class="rt lat"><span>İbrahim Doğan Haircut ✦ Mezitli · Mersin ✦</span><span>İbrahim Doğan Haircut ✦ Mezitli · Mersin ✦</span><span>İbrahim Doğan Haircut ✦ Mezitli · Mersin ✦</span><span>İbrahim Doğan Haircut ✦ Mezitli · Mersin ✦</span></div></div>
+<div class="rail r" aria-hidden="true"><div class="rt" id="railR"></div></div>
 
 <nav class="top" id="nav"><div class="wrap in">
-  <a href="#top" class="logo" aria-label="Ana sayfa"><img src="logo.jpg" alt="İbrahim Doğan Haircut logosu"><span class="lt"><b><i></i>Hair Artist</b><span>Bay &amp; Bayan</span></span></a>
-  <a href="#top" class="cname"><b>İbrahim Doğan</b><span>Haircut</span></a>
+  <a href="#top" class="logo" data-ia="a_home"><img src="logo.jpg" alt="İbrahim Doğan Haircut"><span class="lt"><b><i></i><span data-i="lt1">Hair Artist</span></b><span data-i="lt2">Bay &amp; Bayan</span></span></a>
+  <a href="#top" class="cname"><b class="lat">İbrahim Doğan</b><span class="lat">Haircut</span></a>
   <div class="navr">
-    <a href="#randevu" class="btn solid magnet">Randevu al</a>
-    <button class="mbtn magnet" id="mOpen" type="button" aria-label="Menüyü aç"><i></i><i></i></button>
+    <div class="lang" data-lang></div>
+    <a href="#randevu" class="btn solid magnet" data-i="cta_nav">Randevu al</a>
+    <button class="mbtn magnet" id="mOpen" type="button" data-ia="m_open"><i></i><i></i></button>
   </div>
 </div></nav>
 
 <div class="menu" id="menu" aria-hidden="true">
-  <button class="mx" id="mClose" type="button" aria-label="Menüyü kapat">&#10005;</button>
-  <a class="ml" href="#hizmetler"><span><small>01</small>Hizmetler</span></a>
-  <a class="ml" href="#liste"><span><small>02</small>Hizmet listesi</span></a>
-  <a class="ml" href="#hakkinda"><span><small>03</small>Hakkında</span></a>
-  <a class="ml" href="#kareler"><span><small>04</small>Kareler</span></a>
-  <a class="ml" href="#konum"><span><small>05</small>Konum</span></a>
-  <a class="ml" href="#randevu"><span><small>06</small>Randevu</span></a>
+  <button class="mx" id="mClose" type="button" data-ia="m_close">&#10005;</button>
+  <div class="lang" data-lang></div>
+  <a class="ml" href="#hizmetler"><span><small>01</small><span data-i="m1">Hizmetler</span></span></a>
+  <a class="ml" href="#liste"><span><small>02</small><span data-i="m2">Hizmet listesi</span></span></a>
+  <a class="ml" href="#hakkinda"><span><small>03</small><span data-i="m3">Hakkında</span></span></a>
+  <a class="ml" href="#kareler"><span><small>04</small><span data-i="m4">Kareler</span></span></a>
+  <a class="ml" href="#konum"><span><small>05</small><span data-i="m5">Konum</span></span></a>
+  <a class="ml" href="#randevu"><span><small>06</small><span data-i="m6">Randevu</span></span></a>
   <div class="mf"><a href="https://instagram.com/ibrahimdoganhaircut" target="_blank" rel="noopener">Instagram</a><a href="https://wa.me/905304274247" target="_blank" rel="noopener">WhatsApp</a><span>Yeni Mahalle, 33171 Sk. No:16 · Mersin</span></div>
 </div>
 
 <main>
 <header class="hero" id="top"><div class="wrap">
   <div>
-    <div class="kick fade">İbrahim Doğan Hair Artist <span>✦</span> Mezitli / Mersin</div>
-    <div class="rate fade d1"><b>29,2K</b> takipçi <span>·</span> Bay &amp; Bayan <span>·</span> OMC Hair World Mersin İl Temsilcisi</div>
-    <h1 aria-label="Detaylar belli eder."><span class="ln"><span>Detaylar</span></span><span class="ln"><span>belli eder.</span></span></h1>
-    <div class="tag fade d2">Kesim. Sakal. Stil.</div>
-    <p class="lede fade d3">İyi bir kesim yüzünüzü okumakla başlar. Yüz ve kafa geometrinize göre planlanan, kişiye özel erkek saç kesimi.</p>
-    <div class="cta fade d4"><a href="#randevu" class="btn solid magnet"><span>Randevunu al</span><span>→</span></a><a href="#kareler" class="btn magnet"><span>Filmi izle</span></a></div>
+    <div class="kick fade" data-ih="kick">İbrahim Doğan Hair Artist <span>✦</span> Mezitli / Mersin</div>
+    <div class="rate fade d1" data-ih="rate"><b>29,2K</b> takipçi <span>·</span> Bay &amp; Bayan <span>·</span> OMC Hair World Mersin İl Temsilcisi</div>
+    <h1 id="h1"><span class="ln"><span data-i="h1a">Detaylar</span></span><span class="ln"><span data-i="h1b">belli eder.</span></span></h1>
+    <div class="tag fade d2" data-i="tag">Kesim. Sakal. Stil.</div>
+    <p class="lede fade d3" data-i="lede">İyi bir kesim yüzünüzü okumakla başlar. Yüz ve kafa geometrinize göre planlanan, kişiye özel erkek saç kesimi.</p>
+    <div class="cta fade d4"><a href="#randevu" class="btn solid magnet"><span data-i="cta1">Randevunu al</span><span class="fl">→</span></a><a href="#kareler" class="btn magnet"><span data-i="cta2">Filmi izle</span></a></div>
   </div>
   <div style="position:relative">
     <div class="hcard" id="hcard">
       <video src="hero.mp4" poster="hero.jpg" autoplay muted loop playsinline preload="auto"></video>
-      <span class="lv"><i></i>Salon içinden</span>
-      <p class="cap">“Günün yorgunluğunu unutturan bir bakım deneyimi.”</p>
+      <span class="lv"><i></i><span data-i="live">Salon içinden</span></span>
+      <p class="cap" data-i="cap">“Günün yorgunluğunu unutturan bir bakım deneyimi.”</p>
     </div>
     <div class="badge magnet" aria-hidden="true">
       <svg class="ring" viewBox="0 0 100 100"><defs><path id="cp" d="M50,50 m-40,0 a40,40 0 1,1 80,0 a40,40 0 1,1 -80,0"/></defs><text><textPath href="#cp" textLength="248" lengthAdjust="spacing">İBRAHİM DOĞAN • HAIRCUT • MERSİN • </textPath></text></svg>
@@ -382,125 +416,157 @@ footer .ft a:hover{color:var(--fg)}
   </div>
 </div></header>
 
-<div class="mq dark" aria-hidden="true"><div class="t"><span>Saç Kesimi</span><span class="o">Sakal</span><span>Fön</span><span class="o">Cilt Bakımı</span><span>İpek Kirpik</span><span class="o">Microblading</span><span>Saç Kesimi</span><span class="o">Sakal</span><span>Fön</span><span class="o">Cilt Bakımı</span><span>İpek Kirpik</span><span class="o">Microblading</span></div></div>
+<div class="mq dark" aria-hidden="true"><div class="t" id="mq1"></div></div>
 
 <section id="hizmetler"><div class="wrap">
-  <div class="pill" data-rv>Hizmetler ✦</div>
-  <h2 class="h2"><span class="mask" data-rv><span>Koltukta</span></span><span class="mask" data-rv><span class="it">ne yapıyoruz?</span></span></h2>
+  <div class="pill" data-rv><span data-i="p_svc">Hizmetler</span> ✦</div>
+  <h2 class="h2"><span class="mask" data-rv><span data-i="h_svc1">Koltukta</span></span><span class="mask" data-rv><span class="it" data-i="h_svc2">ne yapıyoruz?</span></span></h2>
   <div class="cards">
-    <a href="#randevu" class="card" data-rv data-tilt data-cat="Bay" data-svc="Saç Kesimi"><video src="c3.mp4" poster="s1.jpg" muted loop playsinline preload="metadata" data-auto aria-label="Makasla kulak hattı kesimi"></video><span class="no">01</span><div class="tx"><div><h3>Kesim</h3><p>Yüz ve kafa geometrinize özel, hassas kesim.</p></div><span class="arr">→</span></div></a>
-    <a href="#randevu" class="card" data-rv data-tilt data-cat="Bay" data-svc="Sakal Tasarımı"><video src="c4.mp4" poster="s2.jpg" muted loop playsinline preload="metadata" data-auto aria-label="Makineyle sakal çizgisi"></video><span class="no">02</span><div class="tx"><div><h3>Sakal</h3><p>Keskin hatlar ve temiz geçişlerle sakal formu.</p></div><span class="arr">→</span></div></a>
-    <a href="#randevu" class="card" data-rv data-tilt data-cat="Bay" data-svc="Fön &amp; Şekillendirme"><video src="c5.mp4" poster="s3.jpg" muted loop playsinline preload="metadata" data-auto aria-label="Fön ile şekillendirme"></video><span class="no">03</span><div class="tx"><div><h3>Stil</h3><p>Fön ve şekillendirme ile son dokunuş.</p></div><span class="arr">→</span></div></a>
+    <a href="#randevu" class="card" data-rv data-tilt data-cat="m" data-svc="cut"><video src="c3.mp4" poster="s1.jpg" muted loop playsinline preload="metadata" data-auto></video><span class="no">01</span><div class="tx"><div><h3 data-i="c1t">Kesim</h3><p data-i="c1d">Yüz ve kafa geometrinize özel, hassas kesim.</p></div><span class="arr"><span class="fl">→</span></span></div></a>
+    <a href="#randevu" class="card" data-rv data-tilt data-cat="m" data-svc="beard"><video src="c4.mp4" poster="s2.jpg" muted loop playsinline preload="metadata" data-auto></video><span class="no">02</span><div class="tx"><div><h3 data-i="c2t">Sakal</h3><p data-i="c2d">Keskin hatlar ve temiz geçişlerle sakal formu.</p></div><span class="arr"><span class="fl">→</span></span></div></a>
+    <a href="#randevu" class="card" data-rv data-tilt data-cat="m" data-svc="style"><video src="c5.mp4" poster="s3.jpg" muted loop playsinline preload="metadata" data-auto></video><span class="no">03</span><div class="tx"><div><h3 data-i="c3t">Stil</h3><p data-i="c3d">Fön ve şekillendirme ile son dokunuş.</p></div><span class="arr"><span class="fl">→</span></span></div></a>
   </div>
 </div></section>
 
 <section id="liste" style="padding-top:0"><div class="wrap">
   <div class="svc-head">
-    <div><div class="pill" data-rv>Bay &amp; Bayan ✦</div><h2 class="h2"><span class="mask" data-rv><span>Hizmet listesi</span></span></h2></div>
+    <div><div class="pill" data-rv><span data-i="p_list">Bay &amp; Bayan</span> ✦</div><h2 class="h2"><span class="mask" data-rv><span data-i="h_list">Hizmet listesi</span></span></h2></div>
     <div class="tabs" id="tabs"></div>
   </div>
   <div class="list" id="list"></div>
-  <p class="note">* Fiyat bilgisi için WhatsApp'tan yazabilirsiniz. Bayan hizmetleri @iremdoganbeauty tarafından verilir.</p>
+  <p class="note" data-i="note">* Fiyat bilgisi için WhatsApp'tan yazabilirsiniz. Bayan hizmetleri @iremdoganbeauty tarafından verilir.</p>
 </div></section>
 
-<div class="mq rev" aria-hidden="true"><div class="t"><span class="o">Detay</span><span>Geometri</span><span class="o">Makas</span><span>Tarak</span><span class="o">Makine</span><span>Fön</span><span class="o">Detay</span><span>Geometri</span><span class="o">Makas</span><span>Tarak</span><span class="o">Makine</span><span>Fön</span></div></div>
+<div class="mq rev" aria-hidden="true"><div class="t" id="mq2"></div></div>
 
 <section id="hakkinda"><div class="wrap about">
   <div>
-    <div class="pill" data-rv>İbrahim Doğan ✦</div>
-    <h2 class="h2"><span class="mask" data-rv><span>Önce yüzünüzü</span></span><span class="mask" data-rv><span class="it">okuruz.</span></span></h2>
-    <p data-rv>Mezitli'deki salonumuzda her kesim, yüzünüzün yapısını değerlendirerek başlar. Yüz uzunluğu ve genişliği, alın bölgesi, elmacık kemikleri ve çene hattı birlikte ele alınır.</p>
-    <p data-rv>Sonuç şablondan çıkmaz. Saçınızın yapısına ve tarzınıza göre birlikte planlarız.</p>
+    <div class="pill" data-rv><span class="lat">İbrahim Doğan</span> ✦</div>
+    <h2 class="h2"><span class="mask" data-rv><span data-i="h_ab1">Önce yüzünüzü</span></span><span class="mask" data-rv><span class="it" data-i="h_ab2">okuruz.</span></span></h2>
+    <p data-rv data-i="ab_p1">Mezitli'deki salonumuzda her kesim, yüzünüzün yapısını değerlendirerek başlar. Yüz uzunluğu ve genişliği, alın bölgesi, elmacık kemikleri ve çene hattı birlikte ele alınır.</p>
+    <p data-rv data-i="ab_p2">Sonuç şablondan çıkmaz. Saçınızın yapısına ve tarzınıza göre birlikte planlarız.</p>
     <div class="stats">
-      <div class="stat" data-rv><b data-n="29.2" data-d="1" data-s="K">29,2K</b><span>Takipçi</span></div>
-      <div class="stat" data-rv><b data-n="297">297</b><span>Paylaşım</span></div>
-      <div class="stat" data-rv><b>Mersin</b><span>İl temsilcisi</span></div>
+      <div class="stat" data-rv><b data-n="29.2" data-d="1" data-s="K">29,2K</b><span data-i="st1">Takipçi</span></div>
+      <div class="stat" data-rv><b data-n="297">297</b><span data-i="st2">Paylaşım</span></div>
+      <div class="stat" data-rv><b data-i="st3b">Mersin</b><span data-i="st3">İl temsilcisi</span></div>
     </div>
-    <div class="quote" data-rv><q>İyi bir kesimi detaylar belli eder.</q><small>İbrahim Doğan</small></div>
+    <div class="quote" data-rv><q data-i="quote">İyi bir kesimi detaylar belli eder.</q><small class="lat">İbrahim Doğan</small></div>
   </div>
   <div class="acc" id="acc" data-rv></div>
 </div></section>
 
 <section id="kareler" class="dark"><div class="wrap">
   <div class="gh">
-    <div><h2 class="h2"><span class="mask" data-rv><span>Koltuktan</span></span><span class="mask" data-rv><span class="it">kareler</span></span></h2><p class="sub" data-rv>Salondan gerçek çekimler. İzlemek için dokunun.</p></div>
-    <a class="btn magnet" href="https://instagram.com/ibrahimdoganhaircut" target="_blank" rel="noopener"><span>Takip et</span> @ibrahimdoganhaircut</a>
+    <div><h2 class="h2"><span class="mask" data-rv><span data-i="h_g1">Koltuktan</span></span><span class="mask" data-rv><span class="it" data-i="h_g2">kareler</span></span></h2><p class="sub" data-rv data-i="s_g">Salondan gerçek çekimler. İzlemek için dokunun.</p></div>
+    <a class="btn magnet" href="https://instagram.com/ibrahimdoganhaircut" target="_blank" rel="noopener"><span data-i="follow">Takip et</span> <span class="lat" dir="ltr">@ibrahimdoganhaircut</span></a>
   </div>
   <div class="strip" id="strip">
-    <button class="tile film" data-rv type="button" data-v="film.mp4" data-p="film.jpg" data-sound="1"><span class="tg">Film · Sesli</span><video src="film.mp4" poster="film.jpg" muted loop playsinline preload="metadata" data-auto></video><span class="play">&#9654;</span><span class="lb">Salon filmi</span></button>
-    <button class="tile" data-rv type="button" data-v="c1.mp4" data-p="c1.jpg"><span class="tg">Detay</span><video src="c1.mp4" poster="c1.jpg" muted loop playsinline preload="metadata" data-auto></video><span class="play">&#9654;</span><span class="lb">Tarak &amp; makas</span></button>
-    <button class="tile" data-rv type="button" data-v="c2.mp4" data-p="c2.jpg"><span class="tg">Detay</span><video src="c2.mp4" poster="c2.jpg" muted loop playsinline preload="metadata" data-auto></video><span class="play">&#9654;</span><span class="lb">Makine</span></button>
-    <button class="tile" data-rv type="button" data-v="c3.mp4" data-p="c3.jpg"><span class="tg">Detay</span><video src="c3.mp4" poster="c3.jpg" muted loop playsinline preload="metadata" data-auto></video><span class="play">&#9654;</span><span class="lb">Kulak hattı</span></button>
-    <button class="tile" data-rv type="button" data-v="c4.mp4" data-p="c4.jpg"><span class="tg">Detay</span><video src="c4.mp4" poster="c4.jpg" muted loop playsinline preload="metadata" data-auto></video><span class="play">&#9654;</span><span class="lb">Sakal çizgisi</span></button>
-    <button class="tile" data-rv type="button" data-v="c5.mp4" data-p="c5.jpg"><span class="tg">Detay</span><video src="c5.mp4" poster="c5.jpg" muted loop playsinline preload="metadata" data-auto></video><span class="play">&#9654;</span><span class="lb">Fön</span></button>
-    <button class="tile" data-rv type="button" data-v="c6.mp4" data-p="c6.jpg"><span class="tg">Detay</span><video src="c6.mp4" poster="c6.jpg" muted loop playsinline preload="metadata" data-auto></video><span class="play">&#9654;</span><span class="lb">Son dokunuş</span></button>
+    <button class="tile film" data-rv type="button" data-v="film.mp4" data-p="film.jpg" data-sound="1"><span class="tg" data-i="tg_film">Film · Sesli</span><video src="film.mp4" poster="film.jpg" muted loop playsinline preload="metadata" data-auto></video><span class="play">&#9654;</span><span class="lb" data-i="lb0">Salon filmi</span></button>
+    <button class="tile" data-rv type="button" data-v="c1.mp4" data-p="c1.jpg"><span class="tg" data-i="tg_det">Detay</span><video src="c1.mp4" poster="c1.jpg" muted loop playsinline preload="metadata" data-auto></video><span class="play">&#9654;</span><span class="lb" data-i="lb1">Tarak &amp; makas</span></button>
+    <button class="tile" data-rv type="button" data-v="c2.mp4" data-p="c2.jpg"><span class="tg" data-i="tg_det">Detay</span><video src="c2.mp4" poster="c2.jpg" muted loop playsinline preload="metadata" data-auto></video><span class="play">&#9654;</span><span class="lb" data-i="lb2">Makine</span></button>
+    <button class="tile" data-rv type="button" data-v="c3.mp4" data-p="c3.jpg"><span class="tg" data-i="tg_det">Detay</span><video src="c3.mp4" poster="c3.jpg" muted loop playsinline preload="metadata" data-auto></video><span class="play">&#9654;</span><span class="lb" data-i="lb3">Kulak hattı</span></button>
+    <button class="tile" data-rv type="button" data-v="c4.mp4" data-p="c4.jpg"><span class="tg" data-i="tg_det">Detay</span><video src="c4.mp4" poster="c4.jpg" muted loop playsinline preload="metadata" data-auto></video><span class="play">&#9654;</span><span class="lb" data-i="lb4">Sakal çizgisi</span></button>
+    <button class="tile" data-rv type="button" data-v="c5.mp4" data-p="c5.jpg"><span class="tg" data-i="tg_det">Detay</span><video src="c5.mp4" poster="c5.jpg" muted loop playsinline preload="metadata" data-auto></video><span class="play">&#9654;</span><span class="lb" data-i="lb5">Fön</span></button>
+    <button class="tile" data-rv type="button" data-v="c6.mp4" data-p="c6.jpg"><span class="tg" data-i="tg_det">Detay</span><video src="c6.mp4" poster="c6.jpg" muted loop playsinline preload="metadata" data-auto></video><span class="play">&#9654;</span><span class="lb" data-i="lb6">Son dokunuş</span></button>
   </div>
 </div></section>
-<div class="vm" id="vm"><button class="vx" id="vx" type="button" aria-label="Kapat">&#10005;</button><video id="vmv" controls playsinline></video></div>
+<div class="vm" id="vm"><button class="vx" id="vx" type="button" data-ia="close">&#10005;</button><video id="vmv" controls playsinline></video></div>
 
 <section id="konum" class="dark" style="padding-top:0"><div class="wrap hl">
   <div class="loc" data-rv>
-    <div class="tp"><img src="hero.jpg" alt="" loading="lazy"><div class="pin"></div></div>
+    <div class="tp">
+      <svg class="shop" viewBox="0 0 400 220" preserveAspectRatio="xMidYMid meet" role="img" aria-label="İbrahim Doğan Haircut">
+<defs>
+<pattern id="aw" width="24" height="20" patternUnits="userSpaceOnUse"><rect width="12" height="20" fill="#d2ae68"/><rect x="12" width="12" height="20" fill="#0a0a0a"/></pattern>
+<linearGradient id="win" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f1d595" stop-opacity=".55"/><stop offset="1" stop-color="#8a6526" stop-opacity=".25"/></linearGradient>
+<radialGradient id="lampg"><stop offset="0" stop-color="#ffe2a3" stop-opacity=".75"/><stop offset="1" stop-color="#ffe2a3" stop-opacity="0"/></radialGradient>
+<clipPath id="poleclip"><rect x="330" y="118" width="14" height="72" rx="7"/></clipPath>
+</defs>
+<rect width="400" height="220" fill="#101010"/>
+<rect x="0" y="206" width="400" height="14" fill="#0b0b0b"/><line x1="0" y1="206" x2="400" y2="206" stroke="#d2ae68" stroke-opacity=".5"/>
+<rect x="54" y="44" width="292" height="7" fill="#232323"/>
+<rect x="60" y="50" width="280" height="156" fill="#1a1a1a" stroke="#262626"/>
+<circle class="lamp" cx="76" cy="76" r="16" fill="url(#lampg)"/><circle cx="76" cy="76" r="3" fill="#ffe2a3"/>
+<circle class="lamp" cx="324" cy="76" r="16" fill="url(#lampg)"/><circle cx="324" cy="76" r="3" fill="#ffe2a3"/>
+<rect x="92" y="60" width="216" height="32" rx="3" fill="#0a0a0a" stroke="#d2ae68"/>
+<path d="M117 76c-3-5-11-5-11 0s8 5 11 0c3-5 11-5 11 0s-8 5-11 0z" fill="none" stroke="#d2ae68" stroke-width="2.4"/>
+<text class="sign-t" x="220" y="81" text-anchor="middle" font-family="'Playfair Display',Georgia,serif" font-weight="800" font-size="14" letter-spacing="2" fill="#d2ae68">İBRAHİM DOĞAN</text>
+<rect x="78" y="100" width="244" height="17" fill="url(#aw)"/><circle cx="84" cy="117" r="6" fill="#d2ae68"/><circle cx="96" cy="117" r="6" fill="#0a0a0a"/><circle cx="108" cy="117" r="6" fill="#d2ae68"/><circle cx="120" cy="117" r="6" fill="#0a0a0a"/><circle cx="132" cy="117" r="6" fill="#d2ae68"/><circle cx="144" cy="117" r="6" fill="#0a0a0a"/><circle cx="156" cy="117" r="6" fill="#d2ae68"/><circle cx="168" cy="117" r="6" fill="#0a0a0a"/><circle cx="180" cy="117" r="6" fill="#d2ae68"/><circle cx="192" cy="117" r="6" fill="#0a0a0a"/><circle cx="204" cy="117" r="6" fill="#d2ae68"/><circle cx="216" cy="117" r="6" fill="#0a0a0a"/><circle cx="228" cy="117" r="6" fill="#d2ae68"/><circle cx="240" cy="117" r="6" fill="#0a0a0a"/><circle cx="252" cy="117" r="6" fill="#d2ae68"/><circle cx="264" cy="117" r="6" fill="#0a0a0a"/><circle cx="276" cy="117" r="6" fill="#d2ae68"/><circle cx="288" cy="117" r="6" fill="#0a0a0a"/><circle cx="300" cy="117" r="6" fill="#d2ae68"/><circle cx="312" cy="117" r="6" fill="#0a0a0a"/>
+<rect class="glow" x="88" y="128" width="140" height="70" fill="url(#win)" stroke="#d2ae68" stroke-width="1.5"/>
+<line x1="158" y1="128" x2="158" y2="198" stroke="#d2ae68" stroke-opacity=".6"/>
+<path d="M110 196V152a14 14 0 0 1 28 0V196" fill="none" stroke="#7cc6b8" stroke-opacity=".7" stroke-width="2"/>
+<g fill="#0a0a0a"><rect x="176" y="150" width="18" height="20" rx="3"/><rect x="172" y="168" width="26" height="6" rx="2"/><rect x="183" y="174" width="4" height="15" /><rect x="174" y="189" width="22" height="3" rx="1"/></g>
+<g stroke="#d2ae68" stroke-width="1.6" fill="none" opacity=".85"><circle cx="208" cy="140" r="3"/><circle cx="208" cy="150" r="3"/><path d="M210.5 141.5 222 152M210.5 148.5 222 138"/></g>
+<rect x="246" y="128" width="58" height="78" fill="#0e0e0e" stroke="#d2ae68"/>
+<rect class="glow" x="254" y="136" width="42" height="34" fill="url(#win)"/>
+<circle cx="294" cy="172" r="2.6" fill="#d2ae68"/>
+<rect x="333" y="104" width="8" height="4" fill="#d2ae68"/><circle cx="337" cy="101" r="4.5" fill="#d2ae68"/>
+<rect x="328" y="110" width="18" height="8" rx="3" fill="#d2ae68"/>
+<g clip-path="url(#poleclip)"><rect x="330" y="118" width="14" height="72" fill="#f4f4f4"/><g class="stripes"><polygon points="330,100 344,91 344,97 330,106" fill="#d2ae68"/><polygon points="330,112 344,103 344,109 330,118" fill="#0a0a0a"/><polygon points="330,124 344,115 344,121 330,130" fill="#d2ae68"/><polygon points="330,136 344,127 344,133 330,142" fill="#0a0a0a"/><polygon points="330,148 344,139 344,145 330,154" fill="#d2ae68"/><polygon points="330,160 344,151 344,157 330,166" fill="#0a0a0a"/><polygon points="330,172 344,163 344,169 330,178" fill="#d2ae68"/><polygon points="330,184 344,175 344,181 330,190" fill="#0a0a0a"/><polygon points="330,196 344,187 344,193 330,202" fill="#d2ae68"/><polygon points="330,208 344,199 344,205 330,214" fill="#0a0a0a"/><polygon points="330,220 344,211 344,217 330,226" fill="#d2ae68"/></g><rect x="333" y="118" width="3" height="72" fill="#fff" opacity=".45"/></g>
+<rect x="328" y="190" width="18" height="8" rx="3" fill="#d2ae68"/>
+</svg>
+      <div class="pin"></div>
+    </div>
     <div class="bd">
-      <h3>İbrahim Doğan <span class="g">Haircut</span></h3>
-      <p style="color:#555;margin:6px 0 18px">Mezitli / Mersin · Bay &amp; Bayan kuaför</p>
-      <div class="br"><span>Yeni Mahalle, 33171 Sokak No: 16<br>Mezitli, Mersin</span><div class="acts"><a href="https://www.google.com/maps/search/?api=1&amp;query=Yeni+Mahalle+33171+Sokak+No+16+Mezitli+Mersin" target="_blank" rel="noopener">Yol tarifi</a></div></div>
-      <div class="br"><b class="num" id="tel">+90 530 427 42 47</b><div class="acts"><a href="https://wa.me/905304274247" target="_blank" rel="noopener">WhatsApp</a><button type="button" id="copy">Kopyala</button></div></div>
-      <div class="br"><span>Instagram</span><div class="acts"><a href="https://instagram.com/ibrahimdoganhaircut" target="_blank" rel="noopener">@ibrahimdoganhaircut</a></div></div>
+      <h3><span class="lat">İbrahim Doğan</span> <span class="g lat">Haircut</span></h3>
+      <p style="color:#555;margin:6px 0 18px" data-i="loc_sub">Mezitli / Mersin · Bay &amp; Bayan kuaför</p>
+      <div class="br"><span data-ih="addr">Yeni Mahalle, 33171 Sokak No: 16<br>Mezitli, Mersin</span><div class="acts"><a href="https://www.google.com/maps/search/?api=1&amp;query=Yeni+Mahalle+33171+Sokak+No+16+Mezitli+Mersin" target="_blank" rel="noopener" data-i="dir">Yol tarifi</a></div></div>
+      <div class="br"><b class="num lat" id="tel" dir="ltr">+90 530 427 42 47</b><div class="acts"><a href="https://wa.me/905304274247" target="_blank" rel="noopener">WhatsApp</a><button type="button" id="copy" data-i="copy">Kopyala</button></div></div>
+      <div class="br"><span>Instagram</span><div class="acts"><a href="https://instagram.com/ibrahimdoganhaircut" target="_blank" rel="noopener" class="lat" dir="ltr">@ibrahimdoganhaircut</a></div></div>
     </div>
   </div>
   <div>
-    <h2 class="h2" style="font-size:clamp(40px,6vw,84px)"><span class="mask" data-rv><span>Çalışma</span></span><span class="mask" data-rv><span class="it">saatleri</span></span></h2>
-    <p class="sub" data-rv>Randevunuzu aşağıdaki saatler içinde planlayabilirsiniz.</p>
+    <h2 class="h2" style="font-size:clamp(40px,6vw,84px)"><span class="mask" data-rv><span data-i="h_hr1">Çalışma</span></span><span class="mask" data-rv><span class="it" data-i="h_hr2">saatleri</span></span></h2>
+    <p class="sub" data-rv data-i="s_hr">Randevunuzu aşağıdaki saatler içinde planlayabilirsiniz.</p>
     <div id="hours" style="margin-top:30px"></div>
   </div>
 </div></section>
 
 <section class="book" id="randevu"><div class="wrap">
-  <div class="pill" data-rv>Online randevu ✦</div>
-  <h2 class="h2"><span class="mask" data-rv><span>Randevu</span></span><span class="mask" data-rv><span class="it">al</span></span></h2>
-  <p class="sub" data-rv>Dört adımda koltuğunuzu ayırtın.</p>
+  <div class="pill" data-rv><span data-i="p_book">Online randevu</span> ✦</div>
+  <h2 class="h2"><span class="mask" data-rv><span data-i="h_bk1">Randevu</span></span><span class="mask" data-rv><span class="it" data-i="h_bk2">al</span></span></h2>
+  <p class="sub" data-rv data-i="s_bk">Dört adımda koltuğunuzu ayırtın.</p>
   <div class="stepper" id="stepper"></div>
   <div class="panel">
     <div class="pn on" data-p="0">
-      <h3><small>01</small><span>Hizmet seç</span></h3>
+      <h3><small>01</small><span data-i="pn1">Hizmet seç</span></h3>
       <div class="opts" id="oCat"></div>
-      <span class="lbl">Hizmet</span>
+      <span class="lbl" data-i="lbl_svc">Hizmet</span>
       <div class="chips" id="oSvc"></div>
     </div>
     <div class="pn" data-p="1">
-      <h3><small>02</small><span>Tarih &amp; saat</span></h3>
-      <span class="lbl" style="margin-top:0">Tarih</span>
+      <h3><small>02</small><span data-i="pn2">Tarih &amp; saat</span></h3>
+      <span class="lbl" style="margin-top:0" data-i="lbl_date">Tarih</span>
       <div class="chips days" id="oDay"></div>
-      <span class="lbl">Saat</span>
+      <span class="lbl" data-i="lbl_time">Saat</span>
       <div class="chips" id="oTime"></div>
     </div>
     <div class="pn" data-p="2">
-      <h3><small>03</small><span>Bilgilerin</span></h3>
-      <input class="inp" id="iName" placeholder="Ad Soyad" autocomplete="name">
-      <input class="inp" id="iTel" placeholder="Telefon" inputmode="tel" autocomplete="tel">
-      <input class="inp" id="iNote" placeholder="Not (isteğe bağlı)">
+      <h3><small>03</small><span data-i="pn3">Bilgilerin</span></h3>
+      <input class="inp" id="iName" data-ph="ph_name" placeholder="Ad Soyad" autocomplete="name">
+      <input class="inp" id="iTel" data-ph="ph_tel" placeholder="Telefon" inputmode="tel" autocomplete="tel" dir="ltr">
+      <input class="inp" id="iNote" data-ph="ph_note" placeholder="Not (isteğe bağlı)">
     </div>
     <div class="pn" data-p="3">
-      <h3><small>04</small><span>Onay</span></h3>
+      <h3><small>04</small><span data-i="pn4">Onay</span></h3>
       <div class="sum" id="sum"></div>
       <p class="msg" id="msg"></p>
       <div class="done-acts" id="doneActs"></div>
     </div>
     <div class="nav2">
-      <button class="btn magnet" id="bBack" type="button"><span>←</span><span>Geri</span></button>
-      <button class="btn solid magnet" id="bNext" type="button"><span id="bNextT">Devam</span><span>→</span></button>
+      <button class="btn magnet" id="bBack" type="button"><span class="fl">←</span><span data-i="back">Geri</span></button>
+      <button class="btn solid magnet" id="bNext" type="button"><span id="bNextT">Devam</span><span class="fl">→</span></button>
     </div>
   </div>
 </div></section>
 </main>
 
 <footer class="dark"><div class="wrap">
-  <div style="display:flex;align-items:center;gap:14px"><img src="logo.jpg" alt="" style="width:54px;height:54px;border-radius:50%;object-fit:cover;border:1px solid #d2ae68"><span style="font-size:11.5px;letter-spacing:.26em;text-transform:uppercase;color:var(--mute);font-weight:700">Bizi takip et</span></div>
-  <div class="huge">İbrahim <i>Doğan</i></div>
+  <div style="display:flex;align-items:center;gap:14px"><img src="logo.jpg" alt="" style="width:54px;height:54px;border-radius:50%;object-fit:cover;border:1px solid #d2ae68"><span style="font-size:11.5px;letter-spacing:.26em;text-transform:uppercase;color:var(--mute);font-weight:700" data-i="follow_us">Bizi takip et</span></div>
+  <div class="huge lat">İbrahim <i>Doğan</i></div>
   <div class="ft"><a href="https://instagram.com/ibrahimdoganhaircut" target="_blank" rel="noopener">Instagram @ibrahimdoganhaircut</a><a href="https://wa.me/905304274247" target="_blank" rel="noopener">WhatsApp</a><span>© 2026 İbrahim Doğan Haircut</span></div>
 </div></footer>
-<a class="fab" href="#randevu">Randevu</a>
+<a class="fab" href="#randevu" data-i="fab">Randevu</a>
 
 <script>
 /* ======= AYARLAR / SETTINGS ======= */
@@ -508,15 +574,88 @@ footer .ft a:hover{color:var(--fg)}
 const CAL_URL="";
 const WA="905304274247";
 const SLOT_MIN=60, STEP_MIN=30, NEXP=1, BUSY={}, BUSYL={};
-/* Çalışma saatleri — salonla teyit et. Kapalı gün: ["Pazar",null,null] */
-const HOURS=[["Pazartesi","10:00","21:00"],["Salı","10:00","21:00"],["Çarşamba","10:00","21:00"],["Perşembe","10:00","21:00"],["Cuma","10:00","21:00"],["Cumartesi","10:00","21:00"],["Pazar",null,null]];
-const SVC={
- "Bay":{exp:"İbrahim Doğan",d:"Kesim, sakal, fön",items:[["Saç Kesimi","Yüz ve kafa geometrisine özel"],["Sakal Tasarımı","Hat, geçiş ve form"],["Fön & Şekillendirme","Kesimin son dokunuşu"],["Cilt Bakımı","Rahatlatan bakım deneyimi"]]},
- "Bayan":{exp:"İrem Doğan Beauty",d:"Kirpik, kaş, tırnak, cilt",items:[["İpek Kirpik","Doğal ve dolgun bakış"],["Microblading","Yüze uyumlu kaş formu"],["Tırnak","Bakım ve şekillendirme"],["Cilt Bakımı","Cildinize özel uygulama"]]}
+/* Çalışma saatleri — salonla teyit et. Kapalı gün: [null,null]. Sıra: Pazartesi → Pazar */
+const HOURS=[["10:00","21:00"],["10:00","21:00"],["10:00","21:00"],["10:00","21:00"],["10:00","21:00"],["10:00","21:00"],[null,null]];
+const SVC={m:{exp:"İbrahim Doğan",items:["cut","beard","style","skinm"]},w:{exp:"İrem Doğan Beauty",items:["lash","brow","nail","skinw"]}};
+const LANGS=[["tr","TR"],["en","EN"],["ar","ع"]];
+
+/* ======= i18n ======= */
+const T={
+tr:{loc:"tr-TR",a_home:"Ana sayfa",m_open:"Menüyü aç",m_close:"Menüyü kapat",close:"Kapat",lt1:"Hair Artist",lt2:"Bay & Bayan",cta_nav:"Randevu al",
+m1:"Hizmetler",m2:"Hizmet listesi",m3:"Hakkında",m4:"Kareler",m5:"Konum",m6:"Randevu",
+kick:"İbrahim Doğan Hair Artist <span>✦</span> Mezitli / Mersin",rate:"<b>29,2K</b> takipçi <span>·</span> Bay &amp; Bayan <span>·</span> OMC Hair World Mersin İl Temsilcisi",
+h1a:"Detaylar",h1b:"belli eder.",tag:"Kesim. Sakal. Stil.",lede:"İyi bir kesim yüzünüzü okumakla başlar. Yüz ve kafa geometrinize göre planlanan, kişiye özel erkek saç kesimi.",cta1:"Randevunu al",cta2:"Filmi izle",live:"Salon içinden",cap:"“Günün yorgunluğunu unutturan bir bakım deneyimi.”",
+mq1:["Saç Kesimi","Sakal","Fön","Cilt Bakımı","İpek Kirpik","Microblading"],mq2:["Detay","Geometri","Makas","Tarak","Makine","Fön"],rail:"Kesim ✦ Sakal ✦ Stil ✦ Detay ✦",
+p_svc:"Hizmetler",h_svc1:"Koltukta",h_svc2:"ne yapıyoruz?",c1t:"Kesim",c1d:"Yüz ve kafa geometrinize özel, hassas kesim.",c2t:"Sakal",c2d:"Keskin hatlar ve temiz geçişlerle sakal formu.",c3t:"Stil",c3d:"Fön ve şekillendirme ile son dokunuş.",
+p_list:"Bay & Bayan",h_list:"Hizmet listesi",note:"* Fiyat bilgisi için WhatsApp'tan yazabilirsiniz. Bayan hizmetleri @iremdoganbeauty tarafından verilir.",book:"Randevu al",
+cat:{m:"Bay",w:"Bayan"},catd:{m:"Kesim, sakal, fön",w:"Kirpik, kaş, tırnak, cilt"},
+svc:{cut:["Saç Kesimi","Yüz ve kafa geometrisine özel"],beard:["Sakal Tasarımı","Hat, geçiş ve form"],style:["Fön & Şekillendirme","Kesimin son dokunuşu"],skinm:["Cilt Bakımı","Rahatlatan bakım deneyimi"],lash:["İpek Kirpik","Doğal ve dolgun bakış"],brow:["Microblading","Yüze uyumlu kaş formu"],nail:["Tırnak","Bakım ve şekillendirme"],skinw:["Cilt Bakımı","Cildinize özel uygulama"]},
+h_ab1:"Önce yüzünüzü",h_ab2:"okuruz.",ab_p1:"Mezitli'deki salonumuzda her kesim, yüzünüzün yapısını değerlendirerek başlar. Yüz uzunluğu ve genişliği, alın bölgesi, elmacık kemikleri ve çene hattı birlikte ele alınır.",ab_p2:"Sonuç şablondan çıkmaz. Saçınızın yapısına ve tarzınıza göre birlikte planlarız.",
+st1:"Takipçi",st2:"Paylaşım",st3b:"Mersin",st3:"İl temsilcisi",quote:"İyi bir kesimi detaylar belli eder.",
+acc:[["Yüz analizi","Yüzün uzunluğu ve genişliği, alın bölgesi, elmacık kemikleri ve çene hattı birlikte değerlendirilir."],["Kişiye özel plan","Saç yapınızı, tarzınızı ve günlük alışkanlıklarınızı konuşur, kesimin nasıl şekilleneceğini birlikte belirleriz."],["Detaylı kesim","Makas, tarak ve makine birlikte çalışır. Kulak hattı, ense ve geçişler tek tek işlenir."],["Fön & son dokunuş","Havluyla toparlama, fön ve şekillendirme. Koltuktan kalktığınızda sonucu aynada görürsünüz."]],
+h_g1:"Koltuktan",h_g2:"kareler",s_g:"Salondan gerçek çekimler. İzlemek için dokunun.",follow:"Takip et",tg_film:"Film · Sesli",tg_det:"Detay",lb0:"Salon filmi",lb1:"Tarak & makas",lb2:"Makine",lb3:"Kulak hattı",lb4:"Sakal çizgisi",lb5:"Fön",lb6:"Son dokunuş",
+loc_sub:"Mezitli / Mersin · Bay & Bayan kuaför",addr:"Yeni Mahalle, 33171 Sokak No: 16<br>Mezitli, Mersin",dir:"Yol tarifi",copy:"Kopyala",copied:"Kopyalandı",
+h_hr1:"Çalışma",h_hr2:"saatleri",s_hr:"Randevunuzu aşağıdaki saatler içinde planlayabilirsiniz.",today:"Bugün",closed:"Kapalı",days:["Pazartesi","Salı","Çarşamba","Perşembe","Cuma","Cumartesi","Pazar"],
+p_book:"Online randevu",h_bk1:"Randevu",h_bk2:"al",s_bk:"Dört adımda koltuğunuzu ayırtın.",steps:["Hizmet","Tarih & Saat","Bilgilerin","Onay"],
+pn1:"Hizmet seç",lbl_svc:"Hizmet",pn2:"Tarih & saat",lbl_date:"Tarih",lbl_time:"Saat",pn3:"Bilgilerin",ph_name:"Ad Soyad",ph_tel:"Telefon",ph_note:"Not (isteğe bağlı)",pn4:"Onay",back:"Geri",next:"Devam",
+send_cal:"Randevuyu onayla",send_wa:"WhatsApp ile gönder",msg_cal:"Onayladığınızda randevunuz doğrudan salonun takvimine işlenir.",msg_wa:"Gönder'e bastığınızda bilgileriniz WhatsApp'ta hazır mesaj olarak açılır; göndermeniz yeterli. Salon onayladığında randevunuz kesinleşir.",
+pick_cat:"Önce Bay ya da Bayan seçin.",pick_day:"Bir gün seçin.",no_slot:"Bu gün için boş saat kalmadı.",wa_open:"WhatsApp'ı aç",wa_ready:"Randevu mesajınız hazır. WhatsApp açılmadıysa aşağıdaki butona dokunun ya da bilgileri +90 530 427 42 47 numarasına yazın.",
+sending:"Gönderiliyor…",ok_cal:"Randevunuz alındı ✓ Takvimimize işlendi. Görüşmek üzere!",
+err:{taken:"Bu saat az önce doldu, lütfen başka bir saat seçin.",closed:"Seçtiğiniz gün salon kapalı.",hours:"Bu saat çalışma saatleri dışında.",past:"Geçmiş bir zaman seçilemez.",limit:"Çok fazla deneme yapıldı, biraz sonra tekrar deneyin.",invalid:"Bilgilerinizi kontrol edin.",far:"Bu tarih için henüz randevu açılmadı."},
+err_srv:"Bir sorun oluştu. Lütfen tekrar deneyin ya da WhatsApp'tan yazın.",err_net:"Bağlantı kurulamadı. Lütfen tekrar deneyin ya da WhatsApp'tan yazın.",
+sum:{svc:"Hizmet",exp:"Uzman",date:"Tarih",time:"Saat",name:"Ad Soyad",tel:"Telefon",note:"Not"},follow_us:"Bizi takip et",fab:"Randevu"},
+
+en:{loc:"en-GB",a_home:"Home",m_open:"Open menu",m_close:"Close menu",close:"Close",lt1:"Hair Artist",lt2:"Men & Women",cta_nav:"Book now",
+m1:"Services",m2:"Service list",m3:"About",m4:"Gallery",m5:"Location",m6:"Booking",
+kick:"İbrahim Doğan Hair Artist <span>✦</span> Mezitli / Mersin",rate:"<b>29.2K</b> followers <span>·</span> Men &amp; Women <span>·</span> OMC Hair World Mersin Representative",
+h1a:"Details",h1b:"make the cut.",tag:"Cut. Beard. Style.",lede:"A great cut starts with reading your face. A men's haircut planned around the geometry of your face and head.",cta1:"Book your visit",cta2:"Watch the film",live:"Inside the salon",cap:"“A grooming experience that makes you forget the day.”",
+mq1:["Haircut","Beard","Blow-dry","Skin Care","Silk Lashes","Microblading"],mq2:["Detail","Geometry","Scissors","Comb","Clipper","Blow-dry"],rail:"Cut ✦ Beard ✦ Style ✦ Detail ✦",
+p_svc:"Services",h_svc1:"In the chair",h_svc2:"what we do",c1t:"Cut",c1d:"A precise cut shaped to your face and head.",c2t:"Beard",c2d:"Sharp lines and clean fades for your beard.",c3t:"Style",c3d:"The finishing touch with blow-dry and styling.",
+p_list:"Men & Women",h_list:"Service list",note:"* Message us on WhatsApp for prices. Women's services are provided by @iremdoganbeauty.",book:"Book",
+cat:{m:"Men",w:"Women"},catd:{m:"Cut, beard, blow-dry",w:"Lashes, brows, nails, skin"},
+svc:{cut:["Haircut","Tailored to your face and head"],beard:["Beard Design","Lines, fades and shape"],style:["Blow-dry & Styling","The finishing touch"],skinm:["Skin Care","A relaxing care ritual"],lash:["Silk Lashes","A natural, fuller look"],brow:["Microblading","Brows shaped to your face"],nail:["Nails","Care and shaping"],skinw:["Skin Care","Treatment for your skin type"]},
+h_ab1:"First, we read",h_ab2:"your face.",ab_p1:"At our salon in Mezitli, every cut starts with assessing the structure of your face: its length and width, the forehead, cheekbones and jawline are considered together.",ab_p2:"The result doesn't come from a template. We plan it together around your hair and your style.",
+st1:"Followers",st2:"Posts",st3b:"Mersin",st3:"Regional representative",quote:"Details make a great cut.",
+acc:[["Face analysis","The length and width of the face, the forehead, cheekbones and jawline are assessed together."],["A plan for you","We talk about your hair type, style and daily routine, and decide together how the cut will take shape."],["Detailed cut","Scissors, comb and clipper work together. Ear line, nape and fades are worked one by one."],["Blow-dry & finish","Towel dry, blow-dry and styling. When you get up from the chair, you see the result in the mirror."]],
+h_g1:"From the chair",h_g2:"moments",s_g:"Real footage from the salon. Tap to watch.",follow:"Follow",tg_film:"Film · Sound",tg_det:"Detail",lb0:"Salon film",lb1:"Comb & scissors",lb2:"Clipper",lb3:"Ear line",lb4:"Beard line",lb5:"Blow-dry",lb6:"Final touch",
+loc_sub:"Mezitli / Mersin · Men's & women's salon",addr:"Yeni Mahalle, 33171 Sokak No: 16<br>Mezitli, Mersin",dir:"Directions",copy:"Copy",copied:"Copied",
+h_hr1:"Opening",h_hr2:"hours",s_hr:"You can book within the hours below.",today:"Today",closed:"Closed",days:["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+p_book:"Online booking",h_bk1:"Book",h_bk2:"your chair",s_bk:"Reserve your chair in four steps.",steps:["Service","Date & Time","Your details","Confirm"],
+pn1:"Choose a service",lbl_svc:"Service",pn2:"Date & time",lbl_date:"Date",lbl_time:"Time",pn3:"Your details",ph_name:"Full name",ph_tel:"Phone",ph_note:"Note (optional)",pn4:"Confirm",back:"Back",next:"Next",
+send_cal:"Confirm booking",send_wa:"Send via WhatsApp",msg_cal:"When you confirm, your appointment goes straight into the salon's calendar.",msg_wa:"When you press Send, your details open in WhatsApp as a ready message; just send it. Your appointment is final once the salon confirms.",
+pick_cat:"Choose Men or Women first.",pick_day:"Choose a day.",no_slot:"No free times left on this day.",wa_open:"Open WhatsApp",wa_ready:"Your booking message is ready. If WhatsApp didn't open, tap the button below or message +90 530 427 42 47.",
+sending:"Sending…",ok_cal:"Your appointment is booked ✓ It's in our calendar. See you soon!",
+err:{taken:"That time was just taken, please choose another.",closed:"The salon is closed on that day.",hours:"That time is outside opening hours.",past:"You can't choose a past time.",limit:"Too many attempts, please try again later.",invalid:"Please check your details.",far:"Booking isn't open for that date yet."},
+err_srv:"Something went wrong. Please try again or message us on WhatsApp.",err_net:"Couldn't connect. Please try again or message us on WhatsApp.",
+sum:{svc:"Service",exp:"Specialist",date:"Date",time:"Time",name:"Name",tel:"Phone",note:"Note"},follow_us:"Follow us",fab:"Book"},
+
+ar:{loc:"ar-u-nu-latn",a_home:"الرئيسية",m_open:"فتح القائمة",m_close:"إغلاق القائمة",close:"إغلاق",lt1:"خبير الشعر",lt2:"رجالي ونسائي",cta_nav:"احجز موعدك",
+m1:"الخدمات",m2:"قائمة الخدمات",m3:"من نحن",m4:"لقطات",m5:"الموقع",m6:"الحجز",
+kick:"إبراهيم دوغان <span>✦</span> مزيتلي / مرسين",rate:"<b>29.2K</b> متابع <span>·</span> رجالي ونسائي <span>·</span> ممثل OMC Hair World في مرسين",
+h1a:"التفاصيل",h1b:"تصنع الفرق.",tag:"قصّ. لحية. ستايل.",lede:"القصّة الجيدة تبدأ بقراءة وجهك. قصّة رجالية مخصّصة لك، مبنية على شكل وجهك ورأسك.",cta1:"احجز موعدك",cta2:"شاهد الفيلم",live:"من داخل الصالون",cap:"«تجربة عناية تُنسيك تعب اليوم.»",
+mq1:["قصّ الشعر","اللحية","السشوار","العناية بالبشرة","رموش حرير","مايكروبليدنغ"],mq2:["التفاصيل","الهندسة","المقص","المشط","الماكينة","السشوار"],rail:"قصّ ✦ لحية ✦ ستايل ✦ تفاصيل ✦",
+p_svc:"الخدمات",h_svc1:"على الكرسي",h_svc2:"ماذا نقدّم؟",c1t:"القصّ",c1d:"قصّة دقيقة مصمّمة حسب شكل وجهك ورأسك.",c2t:"اللحية",c2d:"خطوط حادّة وتدرّجات نظيفة للحيتك.",c3t:"الستايل",c3d:"اللمسة الأخيرة بالسشوار والتصفيف.",
+p_list:"رجالي ونسائي",h_list:"قائمة الخدمات",note:"* للاستفسار عن الأسعار راسلنا على واتساب. الخدمات النسائية تقدّمها @iremdoganbeauty.",book:"احجز",
+cat:{m:"رجالي",w:"نسائي"},catd:{m:"قصّ، لحية، سشوار",w:"رموش، حواجب، أظافر، بشرة"},
+svc:{cut:["قصّ الشعر","حسب شكل الوجه والرأس"],beard:["تصميم اللحية","خطوط وتدرّج وشكل"],style:["سشوار وتصفيف","اللمسة الأخيرة"],skinm:["العناية بالبشرة","جلسة عناية مريحة"],lash:["رموش حرير","نظرة طبيعية وكثيفة"],brow:["مايكروبليدنغ","حواجب تناسب ملامحك"],nail:["الأظافر","عناية وتشكيل"],skinw:["العناية بالبشرة","جلسة مخصّصة لبشرتك"]},
+h_ab1:"أولاً نقرأ",h_ab2:"ملامح وجهك.",ab_p1:"في صالوننا في مزيتلي تبدأ كل قصّة بتقييم ملامح وجهك: طول الوجه وعرضه، والجبهة، وعظام الخد، وخط الفك.",ab_p2:"النتيجة لا تأتي من قالب جاهز. نخطّطها معك حسب طبيعة شعرك وأسلوبك.",
+st1:"متابع",st2:"منشور",st3b:"مرسين",st3:"ممثل المدينة",quote:"التفاصيل هي ما يصنع القصّة الجيدة.",
+acc:[["تحليل الوجه","نقيّم طول الوجه وعرضه، والجبهة، وعظام الخد، وخط الفك معاً."],["خطة خاصة بك","نتحدّث عن نوع شعرك وأسلوبك وعاداتك اليومية، ونقرّر معاً شكل القصّة."],["قصّ دقيق","المقص والمشط والماكينة تعمل معاً. خط الأذن والرقبة والتدرّجات تُعالَج واحداً واحداً."],["سشوار ولمسة أخيرة","تجفيف بالمنشفة ثم سشوار وتصفيف. وحين تقوم عن الكرسي ترى النتيجة في المرآة."]],
+h_g1:"لقطات",h_g2:"من الكرسي",s_g:"لقطات حقيقية من الصالون. اضغط للمشاهدة.",follow:"تابعنا",tg_film:"فيلم · بالصوت",tg_det:"تفصيل",lb0:"فيلم الصالون",lb1:"مشط ومقص",lb2:"الماكينة",lb3:"خط الأذن",lb4:"خط اللحية",lb5:"السشوار",lb6:"اللمسة الأخيرة",
+loc_sub:"مزيتلي / مرسين · صالون رجالي ونسائي",addr:"Yeni Mahalle, 33171 Sokak No: 16<br>مزيتلي، مرسين",dir:"الاتجاهات",copy:"نسخ",copied:"تم النسخ",
+h_hr1:"أوقات",h_hr2:"الدوام",s_hr:"يمكنك الحجز ضمن الأوقات التالية.",today:"اليوم",closed:"مغلق",days:["الإثنين","الثلاثاء","الأربعاء","الخميس","الجمعة","السبت","الأحد"],
+p_book:"الحجز أونلاين",h_bk1:"احجز",h_bk2:"موعدك",s_bk:"احجز كرسيك في أربع خطوات.",steps:["الخدمة","التاريخ والوقت","بياناتك","التأكيد"],
+pn1:"اختر الخدمة",lbl_svc:"الخدمة",pn2:"التاريخ والوقت",lbl_date:"التاريخ",lbl_time:"الوقت",pn3:"بياناتك",ph_name:"الاسم الكامل",ph_tel:"رقم الهاتف",ph_note:"ملاحظة (اختياري)",pn4:"التأكيد",back:"رجوع",next:"التالي",
+send_cal:"تأكيد الحجز",send_wa:"إرسال عبر واتساب",msg_cal:"عند التأكيد يُسجَّل موعدك مباشرة في تقويم الصالون.",msg_wa:"عند الضغط على إرسال تُفتح بياناتك في واتساب كرسالة جاهزة، وما عليك إلا إرسالها. يصبح الموعد مؤكداً بعد موافقة الصالون.",
+pick_cat:"اختر رجالي أو نسائي أولاً.",pick_day:"اختر يوماً.",no_slot:"لا توجد أوقات متاحة في هذا اليوم.",wa_open:"افتح واتساب",wa_ready:"رسالة الحجز جاهزة. إن لم يُفتح واتساب اضغط الزر أدناه أو راسل الرقم +90 530 427 42 47.",
+sending:"جارٍ الإرسال…",ok_cal:"تم حجز موعدك ✓ وسُجّل في تقويمنا. نراك قريباً!",
+err:{taken:"هذا الوقت حُجز للتو، اختر وقتاً آخر من فضلك.",closed:"الصالون مغلق في هذا اليوم.",hours:"هذا الوقت خارج أوقات الدوام.",past:"لا يمكن اختيار وقت مضى.",limit:"محاولات كثيرة، حاول مرة أخرى بعد قليل.",invalid:"تحقّق من بياناتك.",far:"الحجز لهذا التاريخ لم يُفتح بعد."},
+err_srv:"حدثت مشكلة. حاول مرة أخرى أو راسلنا على واتساب.",err_net:"تعذّر الاتصال. حاول مرة أخرى أو راسلنا على واتساب.",
+sum:{svc:"الخدمة",exp:"المختص",date:"التاريخ",time:"الوقت",name:"الاسم",tel:"الهاتف",note:"ملاحظة"},follow_us:"تابعنا",fab:"احجز"}
 };
-const ACC=[["Yüz analizi","Yüzün uzunluğu ve genişliği, alın bölgesi, elmacık kemikleri ve çene hattı birlikte değerlendirilir."],["Kişiye özel plan","Saç yapınızı, tarzınızı ve günlük alışkanlıklarınızı konuşur, kesimin nasıl şekilleneceğini birlikte belirleriz."],["Detaylı kesim","Makas, tarak ve makine birlikte çalışır. Kulak hattı, ense ve geçişler tek tek işlenir."],["Fön & son dokunuş","Havluyla toparlama, fön ve şekillendirme. Koltuktan kalktığınızda sonucu aynada görürsünüz."]];
-const STEPS=["Hizmet","Tarih & Saat","Bilgilerin","Onay"];
-const DAYF=["Pazartesi","Salı","Çarşamba","Perşembe","Cuma","Cumartesi","Pazar"];
+let L="tr";
+try{const h=location.hash.slice(1),s=localStorage.getItem("idh_lang");if(T[h])L=h;else if(T[s])L=s}catch(e){}
+const t=k=>T[L][k];
 
 const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
 const reduce=matchMedia("(prefers-reduced-motion:reduce)").matches;
@@ -545,7 +684,7 @@ mag();
 if(!reduce)$$("[data-tilt]").forEach(c=>{c.addEventListener("mousemove",e=>{const r=c.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;c.style.transform=`perspective(900px) rotateY(${x*10}deg) rotateX(${-y*10}deg) translateY(-6px)`});c.addEventListener("mouseleave",()=>c.style.transform="")});
 
 /* reveal: only elements below the first screen start hidden */
-const fmtN=(n,d)=>n.toFixed(d).replace(".",",");
+const fmtN=(n,d)=>{const s=n.toFixed(d);return L==="tr"?s.replace(".",","):s};
 function count(el){const n=parseFloat(el.dataset.n),d=+el.dataset.d||0,s=el.dataset.s||"",st=performance.now();(function f(x){const p=Math.min(1,(x-st)/1800);el.textContent=fmtN(n*(1-Math.pow(1-p,4)),d)+s;if(p<1)requestAnimationFrame(f)})(st)}
 if("IntersectionObserver" in window&&!reduce){
   const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("in");e.target.querySelectorAll("[data-n]").forEach(count);io.unobserve(e.target)}}),{threshold:.15});
@@ -554,22 +693,26 @@ if("IntersectionObserver" in window&&!reduce){
 
 /* scroll fx */
 addEventListener("scroll",()=>{const h=document.documentElement;$("#prog").style.width=scrollY/Math.max(1,h.scrollHeight-innerHeight)*100+"%";$("#nav").classList.toggle("sc",scrollY>40);
-  if(!reduce&&scrollY<innerHeight){$("#hcard").style.translate=`0 ${scrollY*.12}px`;$(".hero h1").style.transform=`translateX(${-scrollY*.1}px)`}},{passive:true});
+  if(!reduce&&scrollY<innerHeight){$("#hcard").style.translate=`0 ${scrollY*.12}px`;$(".hero h1").style.transform=`translateX(${(L==="ar"?1:-1)*scrollY*.1}px)`}},{passive:true});
+
+/* marquees + rail */
+function renderMq(){["mq1","mq2"].forEach(id=>{const a=t(id);$("#"+id).innerHTML=a.concat(a).map((w,i)=>`<span${i%2?' class="o"':""}>${esc(w)}</span>`).join("")});
+  $("#railR").innerHTML=Array(4).fill(`<span>${esc(t("rail"))}</span>`).join("")}
 
 /* services list */
-let cat="Bay";
-function buildTabs(){const tb=$("#tabs");tb.innerHTML="";Object.keys(SVC).forEach(k=>{const b=document.createElement("button");b.className="tab"+(k===cat?" on":"");b.textContent=k;b.type="button";b.onclick=()=>{cat=k;buildTabs();renderList()};tb.append(b)})}
-function renderList(){$("#list").innerHTML=SVC[cat].items.map((s,i)=>`<div class="row" style="animation-delay:${i*.05}s"><span class="no">${String(i+1).padStart(2,"0")}</span><span class="nm">${esc(s[0])}</span><span class="ds">${esc(s[1])}</span><button class="bk" type="button" data-s="${esc(s[0])}">Randevu al</button></div>`).join("");
+let cat="m";
+function buildTabs(){const tb=$("#tabs");tb.innerHTML="";Object.keys(SVC).forEach(k=>{const b=document.createElement("button");b.className="tab"+(k===cat?" on":"");b.textContent=t("cat")[k];b.type="button";b.onclick=()=>{cat=k;buildTabs();renderList()};tb.append(b)})}
+function renderList(){$("#list").innerHTML=SVC[cat].items.map((id,i)=>{const s=t("svc")[id];return `<div class="row" style="animation-delay:${i*.05}s"><span class="no">${String(i+1).padStart(2,"0")}</span><span class="nm">${esc(s[0])}</span><span class="ds">${esc(s[1])}</span><button class="bk" type="button" data-s="${id}">${esc(t("book"))}</button></div>`}).join("");
   $$(".row .bk").forEach(b=>b.onclick=()=>bookFor(cat,b.dataset.s))}
 function bookFor(c,s){S.cat=c;S.svc=s;buildCat();go(0);$("#randevu").scrollIntoView({behavior:reduce?"auto":"smooth"})}
 $$(".card").forEach(c=>c.addEventListener("click",e=>{e.preventDefault();bookFor(c.dataset.cat,c.dataset.svc)}));
 
 /* accordion */
-$("#acc").innerHTML=ACC.map((a,i)=>`<div class="ai ${i===0?"open":""}"><button class="ah" type="button" aria-expanded="${i===0}"><span class="n">${String(i+1).padStart(2,"0")}</span><span class="t">${a[0]}</span><span class="pl">+</span></button><div class="ab" style="max-height:${i===0?240:0}px"><p>${a[1]}</p></div></div>`).join("");
-$$(".ai").forEach(it=>it.querySelector(".ah").onclick=()=>{const o=it.classList.contains("open");$$(".ai").forEach(x=>{x.classList.remove("open");x.querySelector(".ah").setAttribute("aria-expanded","false");x.querySelector(".ab").style.maxHeight=0});if(!o){it.classList.add("open");it.querySelector(".ah").setAttribute("aria-expanded","true");const b=it.querySelector(".ab");b.style.maxHeight=b.scrollHeight+"px"}});
+function renderAcc(){$("#acc").innerHTML=t("acc").map((a,i)=>`<div class="ai ${i===0?"open":""}"><button class="ah" type="button" aria-expanded="${i===0}"><span class="n">${String(i+1).padStart(2,"0")}</span><span class="t">${esc(a[0])}</span><span class="pl">+</span></button><div class="ab" style="max-height:${i===0?260:0}px"><p>${esc(a[1])}</p></div></div>`).join("");
+  $$(".ai").forEach(it=>it.querySelector(".ah").onclick=()=>{const o=it.classList.contains("open");$$(".ai").forEach(x=>{x.classList.remove("open");x.querySelector(".ah").setAttribute("aria-expanded","false");x.querySelector(".ab").style.maxHeight=0});if(!o){it.classList.add("open");it.querySelector(".ah").setAttribute("aria-expanded","true");const b=it.querySelector(".ab");b.style.maxHeight=b.scrollHeight+"px"}})}
 
 /* hours */
-(function(){const td=(new Date().getDay()+6)%7;$("#hours").innerHTML=HOURS.map((h,i)=>`<div class="hr ${i===td?"today":""}"><span>${DAYF[i]}${i===td?"<em>Bugün</em>":""}</span>${h[1]?`<span>${h[1]} — ${h[2]}</span>`:`<span class="cl">Kapalı</span>`}</div>`).join("")})();
+function renderHours(){const td=(new Date().getDay()+6)%7;$("#hours").innerHTML=HOURS.map((h,i)=>`<div class="hr ${i===td?"today":""}"><span>${t("days")[i]}${i===td?`<em>${t("today")}</em>`:""}</span>${h[0]?`<span dir="ltr">${h[0]} — ${h[1]}</span>`:`<span class="cl">${t("closed")}</span>`}</div>`).join("")}
 
 /* video modal */
 const vm=$("#vm"),vv=$("#vmv");
@@ -578,53 +721,53 @@ $$("[data-v]").forEach(b=>b.addEventListener("click",()=>{vv.src=b.dataset.v;vv.
 $("#vx").onclick=vclose;vm.addEventListener("click",e=>{if(e.target===vm)vclose()});addEventListener("keydown",e=>{if(e.key==="Escape")vclose()});
 
 /* copy phone */
-$("#copy").onclick=()=>{const b=$("#copy"),ok=()=>{b.textContent="Kopyalandı";setTimeout(()=>b.textContent="Kopyala",1800)},sel=()=>{const r=document.createRange();r.selectNodeContents($("#tel"));const s=getSelection();s.removeAllRanges();s.addRange(r)};try{navigator.clipboard.writeText("+905304274247").then(ok,sel)}catch(e){sel()}};
+$("#copy").onclick=()=>{const b=$("#copy"),ok=()=>{b.textContent=t("copied");setTimeout(()=>b.textContent=t("copy"),1800)},sel=()=>{const r=document.createRange();r.selectNodeContents($("#tel"));const s=getSelection();s.removeAllRanges();s.addRange(r)};try{navigator.clipboard.writeText("+905304274247").then(ok,sel)}catch(e){sel()}};
 
 /* ===== booking wizard ===== */
 const S={step:0,cat:"",svc:"",date:null,time:"",name:"",tel:"",note:""};
 const mkChip=(el,items,fn,cls="chip")=>{el.innerHTML="";items.forEach(it=>{const b=document.createElement("button");b.type="button";b.className=cls+(it.on?" on":"")+(it.dis?" dis":"");b.innerHTML=it.html;if(it.dis)b.disabled=true;b.onclick=()=>fn(it,b);el.append(b)})};
 const pick=(el,b)=>[...el.children].forEach(c=>c.classList.toggle("on",c===b));
+const hint=s=>`<span style="color:#888;font-size:14px">${esc(s)}</span>`;
 function loadBusy(d){if(!CAL_URL)return;const k=ymd(d);if(BUSY[k]||BUSYL[k])return;BUSYL[k]=1;fetch(CAL_URL+"?action=busy&date="+k).then(r=>r.json()).then(j=>{if(j&&j.ok){BUSY[k]=j.busy||[];if(S.date&&ymd(S.date)===k)buildTimes()}}).catch(()=>{}).finally(()=>{delete BUSYL[k]})}
-function buildCat(){mkChip($("#oCat"),Object.keys(SVC).map(k=>({k,on:S.cat===k,html:`<b>${k}</b><span>${SVC[k].d} · ${SVC[k].exp}</span>`})),(it,b)=>{S.cat=it.k;S.svc="";pick($("#oCat"),b);buildSvc();upd()},"opt");buildSvc();upd()}
-function buildSvc(){const box=$("#oSvc");if(!S.cat){box.innerHTML='<span style="color:#888;font-size:14px">Önce Bay ya da Bayan seçin.</span>';return}
-  mkChip(box,SVC[S.cat].items.map(s=>({s:s[0],on:S.svc===s[0],html:esc(s[0])})),(it,b)=>{S.svc=it.s;pick(box,b);upd()})}
+function buildCat(){mkChip($("#oCat"),Object.keys(SVC).map(k=>({k,on:S.cat===k,html:`<b>${esc(t("cat")[k])}</b><span>${esc(t("catd")[k])} · ${SVC[k].exp}</span>`})),(it,b)=>{S.cat=it.k;S.svc="";pick($("#oCat"),b);buildSvc();upd()},"opt");buildSvc();upd()}
+function buildSvc(){const box=$("#oSvc");if(!S.cat){box.innerHTML=hint(t("pick_cat"));return}
+  mkChip(box,SVC[S.cat].items.map(id=>({s:id,on:S.svc===id,html:esc(t("svc")[id][0])})),(it,b)=>{S.svc=it.s;pick(box,b);upd()})}
 function buildDays(){const days=[];for(let i=0;i<14;i++){const d=new Date();d.setHours(0,0,0,0);d.setDate(d.getDate()+i);days.push(d)}
-  mkChip($("#oDay"),days.map(d=>{const w=(d.getDay()+6)%7;return{d,dis:!HOURS[w][1],on:S.date&&S.date.toDateString()===d.toDateString(),html:`<small>${d.toLocaleDateString("tr-TR",{weekday:"short"})}</small><b>${d.getDate()}</b><small>${d.toLocaleDateString("tr-TR",{month:"short"})}</small>`}}),(it,b)=>{S.date=it.d;S.time="";pick($("#oDay"),b);buildTimes();upd()});buildTimes()}
-function buildTimes(){const d=S.date,box=$("#oTime");if(!d){box.innerHTML='<span style="color:#888;font-size:14px">Bir gün seçin.</span>';return}
-  const h=HOURS[(d.getDay()+6)%7];if(!h[1]){box.innerHTML="";return}
-  const o=hm2m(h[1]),c=hm2m(h[2]),now=new Date(),isT=d.toDateString()===now.toDateString(),nm=now.getHours()*60+now.getMinutes()+30,list=[];
+  mkChip($("#oDay"),days.map(d=>{const w=(d.getDay()+6)%7;return{d,dis:!HOURS[w][0],on:S.date&&S.date.toDateString()===d.toDateString(),html:`<small>${d.toLocaleDateString(t("loc"),{weekday:"short"})}</small><b>${d.getDate()}</b><small>${d.toLocaleDateString(t("loc"),{month:"short"})}</small>`}}),(it,b)=>{S.date=it.d;S.time="";pick($("#oDay"),b);buildTimes();upd()});buildTimes()}
+function buildTimes(){const d=S.date,box=$("#oTime");if(!d){box.innerHTML=hint(t("pick_day"));return}
+  const h=HOURS[(d.getDay()+6)%7];if(!h[0]){box.innerHTML="";return}
+  const o=hm2m(h[0]),c=hm2m(h[1]),now=new Date(),isT=d.toDateString()===now.toDateString(),nm=now.getHours()*60+now.getMinutes()+30,list=[];
   for(let m=o;m<=c-SLOT_MIN;m+=STEP_MIN){const s=String(Math.floor(m/60)).padStart(2,"0")+":"+String(m%60).padStart(2,"0");const bz=(BUSY[ymd(d)]||[]).filter(b=>hm2m(b.s)<m+SLOT_MIN&&hm2m(b.e)>m);list.push({s,dis:(isT&&m<nm)||bz.length>=NEXP,on:S.time===s,html:s})}
   if(S.time&&list.some(i=>i.s===S.time&&i.dis))S.time="";loadBusy(d);
-  if(!list.some(i=>!i.dis)){box.innerHTML='<span style="color:#888;font-size:14px">Bu gün için boş saat kalmadı.</span>';return}
+  if(!list.some(i=>!i.dis)){box.innerHTML=hint(t("no_slot"));return}
   mkChip(box,list,(it,b)=>{S.time=it.s;pick(box,b);upd()})}
-function buildStepper(){$("#stepper").innerHTML=STEPS.map((s,i)=>`<div class="sp ${i===S.step?"on":""} ${i<S.step?"done":""}"><b>${i<S.step?"✓":i+1}</b><span>${s}</span></div>`).join("")}
+function buildStepper(){$("#stepper").innerHTML=t("steps").map((s,i)=>`<div class="sp ${i===S.step?"on":""} ${i<S.step?"done":""}"><b>${i<S.step?"✓":i+1}</b><span>${esc(s)}</span></div>`).join("")}
 function ok(){switch(S.step){case 0:return S.cat&&S.svc;case 1:return S.date&&S.time;case 2:return S.name.trim()&&S.tel.replace(/\D/g,"").length>=10;default:return true}}
-function dstr(){return S.date?S.date.toLocaleDateString("tr-TR",{day:"numeric",month:"long",weekday:"long"}):"—"}
-function summary(){return [["Hizmet",S.svc],["Uzman",S.cat?SVC[S.cat].exp:""],["Tarih",dstr()],["Saat",S.time],["Ad Soyad",S.name],["Telefon",S.tel]].concat(S.note.trim()?[["Not",S.note.trim()]]:[])}
-function waText(){return "Merhaba, İbrahim Doğan Haircut için randevu talebim:\n"+summary().map(r=>r[0]+": "+r[1]).join("\n")}
+function summary(lg){const D=T[lg],m=D.sum,ds=S.date?S.date.toLocaleDateString(D.loc,{day:"numeric",month:"long",weekday:"long"}):"—";
+  return [[m.svc,S.svc?D.svc[S.svc][0]:""],[m.exp,S.cat?SVC[S.cat].exp:""],[m.date,ds],[m.time,S.time,1],[m.name,S.name],[m.tel,S.tel,1]].concat(S.note.trim()?[[m.note,S.note.trim()]]:[])}
+/* WhatsApp message always goes to the salon in Turkish */
+function waText(){return "Merhaba, İbrahim Doğan Haircut için randevu talebim:\n"+summary("tr").map(r=>r[0]+": "+r[1]).join("\n")+(L!=="tr"?"\n("+L.toUpperCase()+")":"")}
 function upd(){buildStepper();$("#bBack").style.visibility=S.step?"visible":"hidden";
-  const last=S.step===3,nx=$("#bNext");$("#bNextT").textContent=last?(CAL_URL?"Randevuyu onayla":"WhatsApp ile gönder"):"Devam";nx.disabled=!ok();
-  if(last){$("#sum").innerHTML=summary().map(r=>`<div><span>${r[0]}</span><b>${esc(r[1]||"—")}</b></div>`).join("");
-    if(!$("#msg").classList.contains("ok"))$("#msg").textContent=CAL_URL?"Onayladığınızda randevunuz doğrudan salonun takvimine işlenir.":"Gönder'e bastığınızda bilgileriniz WhatsApp'ta hazır mesaj olarak açılır; göndermeniz yeterli. Salon onayladığında randevunuz kesinleşir."}}
+  const last=S.step===3,nx=$("#bNext");$("#bNextT").textContent=last?(CAL_URL?t("send_cal"):t("send_wa")):t("next");nx.disabled=!ok();
+  if(last){$("#sum").innerHTML=summary(L).map(r=>`<div><span>${esc(r[0])}</span><b><bdi${r[2]?' dir="ltr"':""}>${esc(r[1]||"—")}</bdi></b></div>`).join("");
+    if(!$("#msg").classList.contains("ok")&&!$("#msg").classList.contains("err"))$("#msg").textContent=CAL_URL?t("msg_cal"):t("msg_wa")}}
 function go(n){S.step=Math.max(0,Math.min(3,n));$$(".pn").forEach(p=>p.classList.toggle("on",+p.dataset.p===S.step));if(S.step===1)buildDays();upd()}
 $("#bBack").onclick=()=>go(S.step-1);
 $("#bNext").onclick=()=>{if(!ok())return;if(S.step<3){go(S.step+1);return}
   const btn=$("#bNext"),msg=$("#msg"),acts=$("#doneActs");msg.className="msg";acts.innerHTML="";
   const waUrl="https://wa.me/"+WA+"?text="+encodeURIComponent(waText());
   if(!CAL_URL){
-    const a=document.createElement("a");a.href=waUrl;a.target="_blank";a.rel="noopener";a.className="btn solid";a.textContent="WhatsApp'ı aç";
-    acts.append(a);msg.className="msg ok";msg.textContent="Randevu mesajınız hazır. WhatsApp açılmadıysa aşağıdaki butona dokunun ya da bilgileri +90 530 427 42 47 numarasına yazın.";
+    const a=document.createElement("a");a.href=waUrl;a.target="_blank";a.rel="noopener";a.className="btn solid";a.textContent=t("wa_open");
+    acts.append(a);msg.className="msg ok";msg.textContent=t("wa_ready");
     btn.style.display="none";
-    const w=window.open(waUrl,"_blank","noopener");return}
-  btn.disabled=true;msg.textContent="Gönderiliyor…";
-  const body={name:S.name.trim(),tel:S.tel.trim(),svc:S.svc,exp:SVC[S.cat].exp,branch:"Mezitli",note:S.note.trim(),date:ymd(S.date),time:S.time,dur:SLOT_MIN,hp:""};
-  const E={taken:"Bu saat az önce doldu, lütfen başka bir saat seçin.",closed:"Seçtiğiniz gün salon kapalı.",hours:"Bu saat çalışma saatleri dışında.",past:"Geçmiş bir zaman seçilemez.",limit:"Çok fazla deneme yapıldı, biraz sonra tekrar deneyin.",invalid:"Bilgilerinizi kontrol edin.",far:"Bu tarih için henüz randevu açılmadı."};
+    window.open(waUrl,"_blank","noopener");return}
+  btn.disabled=true;msg.textContent=t("sending");
+  const body={name:S.name.trim(),tel:S.tel.trim(),svc:T.tr.svc[S.svc][0],exp:SVC[S.cat].exp,branch:"Mezitli",note:S.note.trim(),date:ymd(S.date),time:S.time,dur:SLOT_MIN,lang:L,hp:""};
   fetch(CAL_URL,{method:"POST",headers:{"Content-Type":"text/plain;charset=utf-8"},body:JSON.stringify(body)}).then(r=>r.json()).then(j=>{
-    if(j&&j.ok){delete BUSY[body.date];msg.className="msg ok";msg.textContent="Randevunuz alındı ✓ Takvimimize işlendi. Görüşmek üzere!";btn.style.display="none"}
-    else{btn.disabled=false;msg.className="msg err";msg.textContent=(j&&E[j.error])||"Bir sorun oluştu. Lütfen tekrar deneyin ya da WhatsApp'tan yazın.";if(j&&j.error==="taken"){delete BUSY[body.date];buildTimes()}}
-  }).catch(()=>{btn.disabled=false;msg.className="msg err";msg.textContent="Bağlantı kurulamadı. Lütfen tekrar deneyin ya da WhatsApp'tan yazın."})};
+    if(j&&j.ok){delete BUSY[body.date];msg.className="msg ok";msg.textContent=t("ok_cal");btn.style.display="none"}
+    else{btn.disabled=false;msg.className="msg err";msg.textContent=(j&&t("err")[j.error])||t("err_srv");if(j&&j.error==="taken"){delete BUSY[body.date];buildTimes()}}
+  }).catch(()=>{btn.disabled=false;msg.className="msg err";msg.textContent=t("err_net")})};
 $("#iName").oninput=e=>{S.name=e.target.value;upd()};$("#iTel").oninput=e=>{S.tel=e.target.value;upd()};$("#iNote").oninput=e=>{S.note=e.target.value};
-
 
 /* videos play while visible */
 if("IntersectionObserver" in window){const vio=new IntersectionObserver(es=>es.forEach(e=>{const v=e.target;if(e.isIntersecting){const p=v.play();if(p&&p.catch)p.catch(()=>{})}else v.pause()}),{threshold:.3});$$("video[data-auto]").forEach(v=>vio.observe(v))}
@@ -633,7 +776,19 @@ const menu=$("#menu");function mset(o){menu.classList.toggle("on",o);menu.setAtt
 $("#mOpen").onclick=()=>mset(true);$("#mClose").onclick=()=>mset(false);
 $$(".menu a.ml").forEach((a,i)=>{a.querySelector("span").style.transitionDelay=(.25+i*.06)+"s";a.addEventListener("click",()=>mset(false))});
 addEventListener("keydown",e=>{if(e.key==="Escape")mset(false)});
-buildTabs();renderList();buildCat();go(0);
+
+/* ===== language ===== */
+function applyLang(l){L=l;const R=document.documentElement;R.lang=l;R.dir=l==="ar"?"rtl":"ltr";
+  try{localStorage.setItem("idh_lang",l)}catch(e){}
+  $$("[data-i]").forEach(e=>{const v=t(e.dataset.i);if(typeof v==="string")e.textContent=v});
+  $$("[data-ih]").forEach(e=>{const v=t(e.dataset.ih);if(typeof v==="string")e.innerHTML=v});
+  $$("[data-ph]").forEach(e=>e.placeholder=t(e.dataset.ph));
+  $$("[data-ia]").forEach(e=>e.setAttribute("aria-label",t(e.dataset.ia)));
+  $("#h1").setAttribute("aria-label",t("h1a")+" "+t("h1b"));
+  $$("[data-lang]").forEach(box=>{box.innerHTML=LANGS.map(([k,lb])=>`<button type="button" data-l="${k}" class="${k===l?"on":""}" lang="${k}" aria-pressed="${k===l}">${lb}</button>`).join("");
+    box.querySelectorAll("button").forEach(b=>b.onclick=()=>applyLang(b.dataset.l))});
+  renderMq();buildTabs();renderList();renderAcc();renderHours();buildCat();if(S.step>=1)buildDays();go(S.step)}
+applyLang(L);
 </script>
 
 </body>
