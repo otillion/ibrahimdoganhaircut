@@ -529,10 +529,12 @@ html[lang=ar] .menu a.ml{font-weight:700;line-height:1.35}
   <div class="stepper" id="stepper"></div>
   <div class="panel">
     <div class="pn on" data-p="0">
-      <h3><small>01</small><span data-i="pn1">Hizmet seç</span></h3>
+      <h3><small>01</small><span data-i="pn1">Hizmet & uzman seç</span></h3>
       <div class="opts" id="oCat"></div>
       <span class="lbl" data-i="lbl_svc">Hizmet</span>
       <div class="chips" id="oSvc"></div>
+      <span class="lbl" data-i="lbl_exp">Uzman</span>
+      <div class="chips" id="oExp"></div>
     </div>
     <div class="pn" data-p="1">
       <h3><small>02</small><span data-i="pn2">Tarih &amp; saat</span></h3>
@@ -576,7 +578,7 @@ const WA="905304274247";
 const SLOT_MIN=60, STEP_MIN=30, NEXP=1, BUSY={}, BUSYL={};
 /* Çalışma saatleri — salonla teyit et. Kapalı gün: [null,null]. Sıra: Pazartesi → Pazar */
 const HOURS=[["08:00","22:00"],["08:00","22:00"],["08:00","22:00"],["08:00","22:00"],["08:00","22:00"],["08:00","22:00"],["08:00","22:00"]];
-const SVC={m:{exp:"İbrahim Doğan",items:["cut","beard","style","skinm"]},w:{exp:"İrem Doğan Beauty",items:["lash","brow","nail","skinw"]}};
+const SVC={m:{exps:["İbrahim Doğan","Deniz","Firas Aslan","Muhammed","Kerem"],items:["cut","beard","style","skinm"]},w:{exps:["İrem Doğan","Eylem"],items:["lash","brow","nail","skinw"]}};
 const LANGS=[["tr","TR"],["en","EN"],["ar","ع"]];
 
 /* ======= i18n ======= */
@@ -597,7 +599,7 @@ h_g1:"Koltuktan",h_g2:"kareler",s_g:"Salondan gerçek çekimler. İzlemek için 
 loc_sub:"Mezitli / Mersin · Bay & Bayan kuaför",addr:"Yeni Mahalle, 33171 Sokak No: 16<br>Mezitli, Mersin",dir:"Yol tarifi",copy:"Kopyala",copied:"Kopyalandı",
 h_hr1:"Çalışma",h_hr2:"saatleri",s_hr:"Randevunuzu aşağıdaki saatler içinde planlayabilirsiniz.",today:"Bugün",closed:"Kapalı",days:["Pazartesi","Salı","Çarşamba","Perşembe","Cuma","Cumartesi","Pazar"],
 p_book:"Online randevu",h_bk1:"Randevu",h_bk2:"al",s_bk:"Dört adımda koltuğunuzu ayırtın.",steps:["Hizmet","Tarih & Saat","Bilgilerin","Onay"],
-pn1:"Hizmet seç",lbl_svc:"Hizmet",pn2:"Tarih & saat",lbl_date:"Tarih",lbl_time:"Saat",pn3:"Bilgilerin",ph_name:"Ad Soyad",ph_tel:"Telefon",ph_note:"Not (isteğe bağlı)",pn4:"Onay",back:"Geri",next:"Devam",
+pn1:"Hizmet & uzman seç",lbl_svc:"Hizmet",lbl_exp:"Uzman",pn2:"Tarih & saat",lbl_date:"Tarih",lbl_time:"Saat",pn3:"Bilgilerin",ph_name:"Ad Soyad",ph_tel:"Telefon",ph_note:"Not (isteğe bağlı)",pn4:"Onay",back:"Geri",next:"Devam",
 send_cal:"Randevuyu onayla",send_wa:"WhatsApp ile gönder",msg_cal:"Onayladığınızda randevunuz doğrudan salonun takvimine işlenir.",msg_wa:"Gönder'e bastığınızda bilgileriniz WhatsApp'ta hazır mesaj olarak açılır; göndermeniz yeterli. Salon onayladığında randevunuz kesinleşir.",
 pick_cat:"Önce Bay ya da Bayan seçin.",pick_day:"Bir gün seçin.",no_slot:"Bu gün için boş saat kalmadı.",wa_open:"WhatsApp'ı aç",wa_ready:"Randevu mesajınız hazır. WhatsApp açılmadıysa aşağıdaki butona dokunun ya da bilgileri +90 530 427 42 47 numarasına yazın.",
 sending:"Gönderiliyor…",ok_cal:"Randevunuz alındı ✓ Takvimimize işlendi. Görüşmek üzere!",
@@ -621,7 +623,7 @@ h_g1:"From the chair",h_g2:"moments",s_g:"Real footage from the salon. Tap to wa
 loc_sub:"Mezitli / Mersin · Men's & women's salon",addr:"Yeni Mahalle, 33171 Sokak No: 16<br>Mezitli, Mersin",dir:"Directions",copy:"Copy",copied:"Copied",
 h_hr1:"Opening",h_hr2:"hours",s_hr:"You can book within the hours below.",today:"Today",closed:"Closed",days:["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
 p_book:"Online booking",h_bk1:"Book",h_bk2:"your chair",s_bk:"Reserve your chair in four steps.",steps:["Service","Date & Time","Your details","Confirm"],
-pn1:"Choose a service",lbl_svc:"Service",pn2:"Date & time",lbl_date:"Date",lbl_time:"Time",pn3:"Your details",ph_name:"Full name",ph_tel:"Phone",ph_note:"Note (optional)",pn4:"Confirm",back:"Back",next:"Next",
+pn1:"Choose service & specialist",lbl_svc:"Service",lbl_exp:"Specialist",pn2:"Date & time",lbl_date:"Date",lbl_time:"Time",pn3:"Your details",ph_name:"Full name",ph_tel:"Phone",ph_note:"Note (optional)",pn4:"Confirm",back:"Back",next:"Next",
 send_cal:"Confirm booking",send_wa:"Send via WhatsApp",msg_cal:"When you confirm, your appointment goes straight into the salon's calendar.",msg_wa:"When you press Send, your details open in WhatsApp as a ready message; just send it. Your appointment is final once the salon confirms.",
 pick_cat:"Choose Men or Women first.",pick_day:"Choose a day.",no_slot:"No free times left on this day.",wa_open:"Open WhatsApp",wa_ready:"Your booking message is ready. If WhatsApp didn't open, tap the button below or message +90 530 427 42 47.",
 sending:"Sending…",ok_cal:"Your appointment is booked ✓ It's in our calendar. See you soon!",
@@ -645,7 +647,7 @@ h_g1:"لقطات",h_g2:"من الكرسي",s_g:"لقطات حقيقية من ا�
 loc_sub:"مزيتلي / مرسين · صالون رجالي ونسائي",addr:"Yeni Mahalle, 33171 Sokak No: 16<br>مزيتلي، مرسين",dir:"الاتجاهات",copy:"نسخ",copied:"تم النسخ",
 h_hr1:"أوقات",h_hr2:"الدوام",s_hr:"يمكنك الحجز ضمن الأوقات التالية.",today:"اليوم",closed:"مغلق",days:["الإثنين","الثلاثاء","الأربعاء","الخميس","الجمعة","السبت","الأحد"],
 p_book:"الحجز أونلاين",h_bk1:"احجز",h_bk2:"موعدك",s_bk:"احجز كرسيك في أربع خطوات.",steps:["الخدمة","التاريخ والوقت","بياناتك","التأكيد"],
-pn1:"اختر الخدمة",lbl_svc:"الخدمة",pn2:"التاريخ والوقت",lbl_date:"التاريخ",lbl_time:"الوقت",pn3:"بياناتك",ph_name:"الاسم الكامل",ph_tel:"رقم الهاتف",ph_note:"ملاحظة (اختياري)",pn4:"التأكيد",back:"رجوع",next:"التالي",
+pn1:"اختر الخدمة والمختص",lbl_svc:"الخدمة",lbl_exp:"المختص",pn2:"التاريخ والوقت",lbl_date:"التاريخ",lbl_time:"الوقت",pn3:"بياناتك",ph_name:"الاسم الكامل",ph_tel:"رقم الهاتف",ph_note:"ملاحظة (اختياري)",pn4:"التأكيد",back:"رجوع",next:"التالي",
 send_cal:"تأكيد الحجز",send_wa:"إرسال عبر واتساب",msg_cal:"عند التأكيد يُسجَّل موعدك مباشرة في تقويم الصالون.",msg_wa:"عند الضغط على إرسال تُفتح بياناتك في واتساب كرسالة جاهزة، وما عليك إلا إرسالها. يصبح الموعد مؤكداً بعد موافقة الصالون.",
 pick_cat:"اختر رجالي أو نسائي أولاً.",pick_day:"اختر يوماً.",no_slot:"لا توجد أوقات متاحة في هذا اليوم.",wa_open:"افتح واتساب",wa_ready:"رسالة الحجز جاهزة. إن لم يُفتح واتساب اضغط الزر أدناه أو راسل الرقم +90 530 427 42 47.",
 sending:"جارٍ الإرسال…",ok_cal:"تم حجز موعدك ✓ وسُجّل في تقويمنا. نراك قريباً!",
@@ -724,27 +726,28 @@ $("#vx").onclick=vclose;vm.addEventListener("click",e=>{if(e.target===vm)vclose(
 $("#copy").onclick=()=>{const b=$("#copy"),ok=()=>{b.textContent=t("copied");setTimeout(()=>b.textContent=t("copy"),1800)},sel=()=>{const r=document.createRange();r.selectNodeContents($("#tel"));const s=getSelection();s.removeAllRanges();s.addRange(r)};try{navigator.clipboard.writeText("+905304274247").then(ok,sel)}catch(e){sel()}};
 
 /* ===== booking wizard ===== */
-const S={step:0,cat:"",svc:"",date:null,time:"",name:"",tel:"",note:""};
+const S={step:0,cat:"",svc:"",exp:"",date:null,time:"",name:"",tel:"",note:""};
 const mkChip=(el,items,fn,cls="chip")=>{el.innerHTML="";items.forEach(it=>{const b=document.createElement("button");b.type="button";b.className=cls+(it.on?" on":"")+(it.dis?" dis":"");b.innerHTML=it.html;if(it.dis)b.disabled=true;b.onclick=()=>fn(it,b);el.append(b)})};
 const pick=(el,b)=>[...el.children].forEach(c=>c.classList.toggle("on",c===b));
 const hint=s=>`<span style="color:#888;font-size:14px">${esc(s)}</span>`;
 function loadBusy(d){if(!CAL_URL)return;const k=ymd(d);if(BUSY[k]||BUSYL[k])return;BUSYL[k]=1;fetch(CAL_URL+"?action=busy&date="+k).then(r=>r.json()).then(j=>{if(j&&j.ok){BUSY[k]=j.busy||[];if(S.date&&ymd(S.date)===k)buildTimes()}}).catch(()=>{}).finally(()=>{delete BUSYL[k]})}
-function buildCat(){mkChip($("#oCat"),Object.keys(SVC).map(k=>({k,on:S.cat===k,html:`<b>${esc(t("cat")[k])}</b><span>${esc(t("catd")[k])} · ${SVC[k].exp}</span>`})),(it,b)=>{S.cat=it.k;S.svc="";pick($("#oCat"),b);buildSvc();upd()},"opt");buildSvc();upd()}
-function buildSvc(){const box=$("#oSvc");if(!S.cat){box.innerHTML=hint(t("pick_cat"));return}
+function buildCat(){mkChip($("#oCat"),Object.keys(SVC).map(k=>({k,on:S.cat===k,html:`<b>${esc(t("cat")[k])}</b><span>${esc(t("catd")[k])}</span>`})),(it,b)=>{S.cat=it.k;S.svc="";S.exp="";pick($("#oCat"),b);buildSvc();upd()},"opt");buildSvc();upd()}
+function buildSvc(){const box=$("#oSvc"),eb=$("#oExp");if(!S.cat){box.innerHTML=hint(t("pick_cat"));eb.innerHTML="";return}
+  mkChip(eb,SVC[S.cat].exps.map(n=>({n,on:S.exp===n,html:esc(n)})),(it,b)=>{S.exp=it.n;pick(eb,b);S.time="";upd()});
   mkChip(box,SVC[S.cat].items.map(id=>({s:id,on:S.svc===id,html:esc(t("svc")[id][0])})),(it,b)=>{S.svc=it.s;pick(box,b);upd()})}
 function buildDays(){const days=[];for(let i=0;i<14;i++){const d=new Date();d.setHours(0,0,0,0);d.setDate(d.getDate()+i);days.push(d)}
   mkChip($("#oDay"),days.map(d=>{const w=(d.getDay()+6)%7;return{d,dis:!HOURS[w][0],on:S.date&&S.date.toDateString()===d.toDateString(),html:`<small>${d.toLocaleDateString(t("loc"),{weekday:"short"})}</small><b>${d.getDate()}</b><small>${d.toLocaleDateString(t("loc"),{month:"short"})}</small>`}}),(it,b)=>{S.date=it.d;S.time="";pick($("#oDay"),b);buildTimes();upd()});buildTimes()}
 function buildTimes(){const d=S.date,box=$("#oTime");if(!d){box.innerHTML=hint(t("pick_day"));return}
   const h=HOURS[(d.getDay()+6)%7];if(!h[0]){box.innerHTML="";return}
   const o=hm2m(h[0]),c=hm2m(h[1]),now=new Date(),isT=d.toDateString()===now.toDateString(),nm=now.getHours()*60+now.getMinutes()+30,list=[];
-  for(let m=o;m<=c-SLOT_MIN;m+=STEP_MIN){const s=String(Math.floor(m/60)).padStart(2,"0")+":"+String(m%60).padStart(2,"0");const bz=(BUSY[ymd(d)]||[]).filter(b=>hm2m(b.s)<m+SLOT_MIN&&hm2m(b.e)>m);list.push({s,dis:(isT&&m<nm)||bz.length>=NEXP,on:S.time===s,html:s})}
+  for(let m=o;m<=c-SLOT_MIN;m+=STEP_MIN){const s=String(Math.floor(m/60)).padStart(2,"0")+":"+String(m%60).padStart(2,"0");const bz=(BUSY[ymd(d)]||[]).filter(b=>(!b.x||b.x===S.exp)&&hm2m(b.s)<m+SLOT_MIN&&hm2m(b.e)>m);list.push({s,dis:(isT&&m<nm)||bz.length>=NEXP,on:S.time===s,html:s})}
   if(S.time&&list.some(i=>i.s===S.time&&i.dis))S.time="";loadBusy(d);
   if(!list.some(i=>!i.dis)){box.innerHTML=hint(t("no_slot"));return}
   mkChip(box,list,(it,b)=>{S.time=it.s;pick(box,b);upd()})}
 function buildStepper(){$("#stepper").innerHTML=t("steps").map((s,i)=>`<div class="sp ${i===S.step?"on":""} ${i<S.step?"done":""}"><b>${i<S.step?"✓":i+1}</b><span>${esc(s)}</span></div>`).join("")}
-function ok(){switch(S.step){case 0:return S.cat&&S.svc;case 1:return S.date&&S.time;case 2:return S.name.trim()&&S.tel.replace(/\D/g,"").length>=10;default:return true}}
+function ok(){switch(S.step){case 0:return S.cat&&S.svc&&S.exp;case 1:return S.date&&S.time;case 2:return S.name.trim()&&S.tel.replace(/\D/g,"").length>=10;default:return true}}
 function summary(lg){const D=T[lg],m=D.sum,ds=S.date?S.date.toLocaleDateString(D.loc,{day:"numeric",month:"long",weekday:"long"}):"—";
-  return [[m.svc,S.svc?D.svc[S.svc][0]:""],[m.exp,S.cat?SVC[S.cat].exp:""],[m.date,ds],[m.time,S.time,1],[m.name,S.name],[m.tel,S.tel,1]].concat(S.note.trim()?[[m.note,S.note.trim()]]:[])}
+  return [[m.svc,S.svc?D.svc[S.svc][0]:""],[m.exp,S.exp],[m.date,ds],[m.time,S.time,1],[m.name,S.name],[m.tel,S.tel,1]].concat(S.note.trim()?[[m.note,S.note.trim()]]:[])}
 /* WhatsApp message always goes to the salon in Turkish */
 function waText(){return "Merhaba, İbrahim Doğan Haircut için randevu talebim:\n"+summary("tr").map(r=>r[0]+": "+r[1]).join("\n")+(L!=="tr"?"\n("+L.toUpperCase()+")":"")}
 function upd(){buildStepper();$("#bBack").style.visibility=S.step?"visible":"hidden";
@@ -762,7 +765,7 @@ $("#bNext").onclick=()=>{if(!ok())return;if(S.step<3){go(S.step+1);return}
     btn.style.display="none";
     window.open(waUrl,"_blank","noopener");return}
   btn.disabled=true;msg.textContent=t("sending");
-  const body={name:S.name.trim(),tel:S.tel.trim(),svc:T.tr.svc[S.svc][0],exp:SVC[S.cat].exp,branch:"Mezitli",note:S.note.trim(),date:ymd(S.date),time:S.time,dur:SLOT_MIN,lang:L,hp:""};
+  const body={name:S.name.trim(),tel:S.tel.trim(),svc:T.tr.svc[S.svc][0],exp:S.exp,branch:"Mezitli",note:S.note.trim(),date:ymd(S.date),time:S.time,dur:SLOT_MIN,lang:L,hp:""};
   fetch(CAL_URL,{method:"POST",headers:{"Content-Type":"text/plain;charset=utf-8"},body:JSON.stringify(body)}).then(r=>r.json()).then(j=>{
     if(j&&j.ok){delete BUSY[body.date];msg.className="msg ok";msg.textContent=t("ok_cal");btn.style.display="none"}
     else{btn.disabled=false;msg.className="msg err";msg.textContent=(j&&t("err")[j.error])||t("err_srv");if(j&&j.error==="taken"){delete BUSY[body.date];buildTimes()}}
